@@ -1,16 +1,10 @@
 // Importing required components and styles
 import Footer from '@/components/Footer/Footer';             // Footer component
-import Header from '@/components/Header/Header';             // Header component
-import 'bootstrap/dist/css/bootstrap.min.css';
-import "./globals.css";                                       // Global styles
-import "./custom.css";                                       // Global styles
+import Header from '@/components/Header/Header';
+import "./globals.css";                                      // Global styles
 
-import { Inter } from 'next/font/google';                    // Importing Inter font from Google Fonts
 import "../assets/css/fontawesome.min.css";                  // FontAwesome CSS
 import { FC, ReactNode } from 'react';
-
-// Define Inter font with Latin subset
-const inter = Inter({ subsets: ['latin'] });
 
 // Metadata for the application
 export const metadata = {
@@ -25,7 +19,7 @@ interface RootLayoutProps {
 const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body >
         <Header />
         {children}
         <Footer />

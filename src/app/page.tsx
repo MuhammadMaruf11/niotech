@@ -1,8 +1,9 @@
+import HowItWorks from "@/components/HowItWorks/HowItWorks";
 
 export default function Home() {
   return (
     <main>
-      <h1></h1>
+      <HowItWorks />
     </main>
   )
 }
