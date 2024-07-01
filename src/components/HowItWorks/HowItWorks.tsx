@@ -22,7 +22,7 @@ const HowItWorks = () => {
                     })}
                 </div>
                 <div className="s">
-                    <img src="/img/random-img/howitworks.png" alt="" />
+                    <img loading="lazy" src="/img/random-img/howitworks.png" alt="" />
                 </div>
             </div>
             <div className="py-12 max-w-screen-xl mx-auto">

@@ -1,9 +1,11 @@
 // Importing required components and styles
-import Footer from '@/components/Footer/Footer';             // Footer component
-import Header from '@/components/Header/Header';
-import "./globals.css";                                      // Global styles
+import Header from '@/components/common/Header/Header';
+import Footer from '@/components/common/Footer/Footer';
 
-import "../assets/css/fontawesome.min.css";                  // FontAwesome CSS
+import "./globals.css";
+
+import "../assets/css/fontawesome.min.css";
+
 import { FC, ReactNode } from 'react';
 
 // Metadata for the application

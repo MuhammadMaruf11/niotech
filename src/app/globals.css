@@ -2,76 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-weight: 400;
+.heading-color {
+  color: #333;
+}
+
+.body-color {
+  color: #666;
+}
+
+@layer base {
+  body {
+    @apply font-normal body-color;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply heading-color;
+  }
+
+  h1 {
+    @apply text-5xl;
+  }
+  h2 {
+    @apply text-4xl;
+  }
+  h3 {
+    @apply text-3xl;
+  }
+  h4 {
+    @apply text-2xl;
+  }
+  h5 {
+    @apply text-xl;
+  }
+  h6 {
+    @apply text-lg;
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
-}
+  .btn-theme {
+    @apply bg-theme text-white py-2 px-4 rounded hover:bg-theme-hover transition duration-300;
+  }
 
-input:focus {
-  outline: 1px solid #a5b4fc;
-}
+  .input-theme {
+    @apply border-2 border-theme py-2 px-4 rounded focus:border-theme-hover;
+  }
 
-.hover\:text-theme:hover {
-  color: #af5517;
-}
-
-.hover\:text-theme-2:hover {
-  color: #f37022;
-}
-
-.hover\:bg-theme:hover {
-  background: #af5517;
-}
-
-.hover\:bg-theme-2:hover {
-  background: #f37022;
-}
-
-.before\:bg-theme:before {
-  background: #af5517;
-}
-
-.before\:bg-theme-2:before {
-  background: #f37022;
-}
-
-.after\:bg-theme:after {
-  background: #af5517;
-}
-
-.after\:bg-theme-2:after {
-  background: #f37022;
-}
-
-.text-theme {
-  color: #af5517;
-}
-
-.text-theme-2 {
-  color: #f37022;
-}
-
-.border-theme {
-  --tw-border-opacity: 1;
-  border-color: rgb(175 85 23 / var(--tw-border-opacity));
-}
-
-.border-theme-2 {
-  --tw-border-opacity: 1;
-  border-color: rgb(243 112 34 / var(--tw-border-opacity));
-}
-
-.bg-theme {
-  --tw-bg-opacity: 1;
-  background-color: rgb(175 85 23 / var(--tw-bg-opacity));
-}
-
-.bg-theme-2 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 112 34 / var(--tw-bg-opacity));
+  .link-theme {
+    @apply py-2 px-4 font-medium border-b-4 border-transparent hover:border-theme-hover transition duration-300;
+  }
 }
