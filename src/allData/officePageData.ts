@@ -15,10 +15,7 @@ export const officeHeadingSecond = [
 
 export const officeBodyFirst = [
   {
-    paragraph: `When you buy a home, you don’t buy bricks, mortar and furniture. You buy an experience.  That’s exactly what we aim to deliver. Our building automation concepts are designed from the ground up, which means they can be customized to suit your luxurious lifestyle. `,
-  },
-  {
-    paragraph: `Using state-of-the-art building automation technology, you can have a leap-fold jump in improving energy efficiency, security, and convenience. `,
+    paragraph: `Did you know that you can save up to 30% energy costs, just by optimising switching times and dimming lights when they’re not in use? Establish a green workplace. Intelligently save energy, without compromising on comfort.`,
   },
 ];
 
@@ -33,24 +30,33 @@ export const officeBodySecond = [
 
 export const officeBodyThird = [
   {
-    paragraph: `Our innovative building security module keeps track of alarm systems installed in every flat/shop of the residential/commercial building, and proactively notifies the central security cabin when an intrusion is detected.`,
+    paragraph: `Forget long queues. Forget complicated, hard-to-use coffee machines. You can now choose your favourite coffee from your smartphone and get an alert when it’s ready for you. More productivity, more bragging rights.`,
+  },
+  {
+    paragraph: `Welcome to the future of work-places.`,
   },
 ];
 
 export const officeBodyFourth = [
   {
-    paragraph: `Prevent damage before it happens. Install fire, smoke and flood sensors across your building campus, and get instant notifications in case of emergencies. You can even configure proactive damage control by automatically turning off power or gas supply during emergencies.`,
+    paragraph: `When your office temperature is too hot or cold, it can increase stress and reduce productivity. But when the room temperature is just right, your team is 10x more energetic, and you get more things done.`,
+  },
+  {
+    paragraph: `Smart climate control technology not only maintains the right temperature by intelligently analysing your usage patterns, but also helps you save energy by cutting down the power when it’s not needed.`,
   },
 ];
 
 export const officeBodyFifth = [
   {
-    paragraph: `Using advanced water level sensors and relays, you can completely automate water management i.e turn on the water pump when the water level is low, and automatically turn it off when the level is high. No human intervention required.`,
+    paragraph: `Are you on the go all the time, but want to keep a tab on all the things going around in your work-space? Do you have multiple office locations, and want a simple, easy-to-use app that can monitor everything on your smartphone?`,
+  },
+  {
+    paragraph: `We’ve got you covered. Our PoE IP infrastructure let you view, monitor and track all the ongoing activities in your work place, from anywhere in the world.`,
   },
 ];
 
 export const officeBodySixth = [
   {
-    paragraph: `Using our advanced IP PoE cameras, you can keep an eye on every floor, every building across your residential/commercial campus. You can pass on access privileges to residents in the building, so that they can give a visual confirmation on visitors and monitor their home from anywhere in the world.`,
+    paragraph: `Get instant alerts when there’s a fire, smoke or flood emergency in your office. Unlike wired alarm systems that don’t get triggered under highly stressful situations, our wireless sensors work in every challenging condition and can even be configured to automatically take pre-defined actions. i.e. call the security, cut-off gas supply or insantly unlock all the gates in the premises.`,
   },
 ];

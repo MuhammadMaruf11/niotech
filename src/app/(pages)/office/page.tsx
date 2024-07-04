@@ -7,8 +7,8 @@ import React from 'react';
 
 const Office = () => {
     const imageBg = '/img/bg/banner-office.jpg';
-    const bannerTitle = 'Building the future of homes';
-    const bannerDescription = 'Eliminate manual interactions. Reduce energy footprint. Deploy proactive security measures. The future of residential and commercial spaces is here.';
+    const bannerTitle = 'Build the geekiest workplace.';
+    const bannerDescription = 'Exclusively for startups and businesses, looking to make a bold statement.';
 
 
     return (
@@ -35,16 +35,19 @@ const Office = () => {
                 <SectionBodyLeft sectionBodyDescriptionsData={officeBodySecond} sectionTitleOne="Make your " sectionTitileColorOne="presentation " sectionTitleTwo="stand out." sectionTitileColorTwo="" sectionImage="/img/office/presentation.jpg" />
             </section>
             <section className='py-12'>
-                <SectionBodyRight sectionBodyDescriptionsData={officeBodyThird} sectionTitleOne="Get notified before " sectionTitileColorOne="intrusion " sectionTitleTwo="happens. " sectionTitileColorTwo="" sectionImage="/img/building/Fibaro_Motion_Recognition.jpg" />
+                <SectionBodyRight sectionBodyDescriptionsData={officeBodyThird} sectionTitleOne="Order " sectionTitileColorOne="coffee " sectionTitleTwo="from your desk." sectionTitileColorTwo="" sectionImage="/img/office/coffee-machines-img.jpg" />
             </section>
             <section className='py-12'>
-                <SectionBodyRight sectionBodyDescriptionsData={officeBodyFourth} sectionTitleOne="Trigger smart " sectionTitileColorOne="fire/smoke " sectionTitleTwo="alarms. " sectionTitileColorTwo="" sectionImage="/img/building/fire-sensors.jpg" />
+                <SectionBodyLeft sectionBodyDescriptionsData={officeBodyFourth} sectionTitleOne="Automate " sectionTitileColorOne="climate " sectionTitleTwo="control.  " sectionTitileColorTwo="Just like that." sectionImage="/img/office/climate.jpg" />
             </section>
             <section className='py-12'>
-                <SectionBodyLeft sectionBodyDescriptionsData={officeBodyFifth} sectionTitleOne="Automate " sectionTitileColorOne="water " sectionTitleTwo="management.  " sectionTitileColorTwo="" sectionImage="/img/building/Shower-Head-Wireless-Speakers.jpg" />
+                <SectionBodyRight sectionBodyDescriptionsData={officeBodyFifth} sectionTitleOne="Monitor " sectionTitileColorOne="workforce. " sectionTitleTwo="From anywhere." sectionTitileColorTwo="" sectionImage="/img/office/monitor.jpg" />
             </section>
             <section className='py-12'>
-                <SectionBodyRight sectionBodyDescriptionsData={officeBodySixth} sectionTitleOne="Keep an " sectionTitileColorOne="eye " sectionTitleTwo="on every floor. " sectionTitileColorTwo="" sectionImage="/img/building/Surveillance-camera.jpg" />
+                <SectionBodyLeft sectionBodyDescriptionsData={officeBodySixth} sectionTitleOne="Protect your " sectionTitileColorOne="employees." sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/office/employeesensor.jpg" />
+            </section>
+            <section className='py-12'>
+                <SectionBodyRight sectionBodyDescriptionsData={officeBodyFirst} sectionTitleOne="Save energy with " sectionTitileColorOne="intelligent " sectionTitleTwo="sensing. " sectionTitileColorTwo="" sectionImage="/img/office/energy.jpg" />
             </section>
         </main>
     );
