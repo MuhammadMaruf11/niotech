@@ -1,3 +1,4 @@
+import ContactAboutUs from "@/components/ContactUsComp/ContactAboutUs";
 import ContactForm from "@/components/ContactUsComp/ContactForm";
 import ContactInformation from "@/components/ContactUsComp/ContactInformation";
 import ContactMap from "@/components/ContactUsComp/ContactMap";
@@ -11,6 +12,7 @@ const ContactUs = () => {
             <ContactUsBanner />
             <ContactForm />
             <ContactInformation />
+            <ContactAboutUs />
             <ContactMap />
         </main>
     );

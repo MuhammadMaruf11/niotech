@@ -64,3 +64,8 @@
     @apply bg-black bg-opacity-75 absolute inset-0 p-0 m-0;
   }
 }
+
+/* input,
+textarea {
+  @apply border-1 border-gray-500 w-full;
+} */
