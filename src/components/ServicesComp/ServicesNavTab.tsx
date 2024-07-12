@@ -3,6 +3,10 @@ import { serviceTabData } from '@/allData/serviceTabData';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Consultancy from './Consultancy';
 import Design from './Design';
+import Installation from './Installation';
+import Programming from './Programming';
+import Support from './Support';
+import SmartCare from './SmartCare';
 
 const ServicesNavTab = () => {
 
@@ -30,19 +34,19 @@ const ServicesNavTab = () => {
                         </TabPanel>
 
                         <TabPanel >
-
+                            <Installation />
                         </TabPanel>
 
                         <TabPanel >
-
+                            <Programming />
                         </TabPanel>
 
                         <TabPanel >
-
+                            <Support />
                         </TabPanel>
 
                         <TabPanel >
-
+                            <SmartCare />
                         </TabPanel>
                     </div>
 
