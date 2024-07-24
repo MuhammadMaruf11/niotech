@@ -1,7 +1,7 @@
 'use client'
+import { contactInitialValue } from "@/initialValue/ContactInitialValue";
+import { contactValidationSchema } from "@/schema/ContactValidationSchema";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
-import { contactValidationSchema } from "../schema/ContactValidationSchema";
-import { contactInitialValue } from "../initialValue/ContactInitialValue";
 
 interface MyFormValues {
     name: string;
@@ -15,7 +15,7 @@ const ContactForm = () => {
 
     const handleSubmit = (values: MyFormValues, { setSubmitting }: FormikHelpers<MyFormValues>) => {
         // Handle form submission logic (e.g., send data to server)
-        console.log('Form submitted:', typeof values);
+        console.log('Form submitted:', values);
         setSubmitting(false); // Reset form submit state
     };
 

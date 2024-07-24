@@ -35,7 +35,7 @@ const SectionBodyLeft: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, s
                     </div>
                 </div>
                 <div>
-                    <img src={sectionImage} alt="" />
+                    <img loading="lazy" src={sectionImage} alt="section_left_side" />
                 </div>
             </div>
         </div>

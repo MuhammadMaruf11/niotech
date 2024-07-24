@@ -8,7 +8,7 @@ const ConceptsItem = () => {
             {conceptItemImgData?.map((data, index) => {
                 return (<div key={index}>
                     <Link href={data?.url}>
-                        <img src={data?.img} alt="" />
+                        <img loading="lazy" src={data?.img} alt="concept" />
                     </Link>
                 </div>)
             })}

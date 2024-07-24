@@ -19,7 +19,7 @@ const SectionBodyRight: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, 
         <div className='container mx-auto max-w-screen-xl'>
             <div className="grid grid-cols-2 gap-6">
                 <div>
-                    <img src={sectionImage} alt="" />
+                    <img loading="lazy" src={sectionImage} alt="section_right_side" />
                 </div>
                 <div>
                     <h3 className='mb-2'>{sectionTitleOne && sectionTitleOne}

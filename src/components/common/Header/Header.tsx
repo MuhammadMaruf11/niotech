@@ -82,7 +82,7 @@ const Header = () => {
                       return (
                         <li key={index} className="text-start">
                           <Link href={url} className='py-3 px-6 hover:bg-stone-100 transition-all duration-300 ease-linear font-medium flex items-center gap-2 border-b-4 border-transparent'>
-                            <img src={icon} alt="submenu_icon" />
+                            <img loading="lazy" src={icon} alt="submenu_icon" />
                             <span> {title}</span>
                           </Link>
                         </li>

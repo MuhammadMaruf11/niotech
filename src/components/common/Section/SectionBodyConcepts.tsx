@@ -39,7 +39,7 @@ const SectionBodyConcepts: FC<sectionProps> = ({ sectionTitle, sectionImage, sec
                     </div>
                 </div>
                 <div>
-                    <img src={sectionImage} alt="" />
+                    <img loading="lazy" src={sectionImage} alt="section_body" />
                 </div>
             </div>
         </div>
