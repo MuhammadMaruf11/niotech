@@ -6,7 +6,7 @@ const SmartCare = () => {
     return (
         <>
             <div>
-                <img className='float-left max-w-96 me-4 mb-4' src="/img/services/smartcare.png" alt="consultancy" />
+                <img loading='lazy' className='float-left max-w-96 me-4 mb-4' src="/img/services/smartcare.png" alt="consultancy" />
             </div>
             <div className="space-y-4">
                 <h5 className='text-[#e9b021] mb-12'>NIOTECH SMART</h5>

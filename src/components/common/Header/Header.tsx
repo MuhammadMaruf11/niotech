@@ -70,9 +70,11 @@ const Header = () => {
               const { title, url, subMenu, icon } = data;
               return (
                 <li key={index} className="inline-block group relative transition-all duration-300 ease-linear">
-                  <Link href={url} className='p-1 font-medium  border-b-4 border-transparent'>
+                  {title === "Blog" ? <Link href={url} target="_blank" className='p-1 font-medium  border-b-4 border-transparent'>
                     {title}
-                  </Link>
+                  </Link> : <Link href={url} className='p-1 font-medium  border-b-4 border-transparent'>
+                    {title}
+                  </Link>}
                   {icon && <i className={icon}></i>}
                   {subMenu && <ul className="bg-white min-w-60 shadow-lg absolute top-auto left-0 h-0 group-hover:h-max transition-all duration-300 ease-linear overflow-hidden">
                     {subMenu?.map((data, index) => {

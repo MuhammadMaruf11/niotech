@@ -2,7 +2,7 @@ const WeBelieve = () => {
     return (
         <section className="bg-theme py-20">
             <div className="container mx-auto max-w-screen-xl">
-                <h2 className="text-3xl uppercase text-center">
+                <h2 className="text-3xl uppercase text-center text-gray-800 font-semibold">
                     WE BELIEVE
                 </h2>
                 <div className="py-6 text-white">

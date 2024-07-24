@@ -13,8 +13,8 @@ const Installation = () => {
                 </div>
             </div>
             <div className='space-y-5'>
-                <img src="/img/services/installation1.jpg" alt="" />
-                <img src="/img/services/installation2.jpg" alt="" />
+                <img loading='lazy' src="/img/services/installation1.jpg" alt="installation_1" />
+                <img loading='lazy' src="/img/services/installation2.jpg" alt="installation_2" />
             </div>
         </div>
     );

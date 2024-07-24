@@ -1,8 +1,9 @@
+import { ambienceData } from '@/allData/ambienceData';
 import { lightingBodyFourth, lightingBodyThird } from '@/allData/lightingPageData';
 import BannerImg from '@/components/common/Banner/BannerImg';
+import SectionBodyConcepts from '@/components/common/Section/SectionBodyConcepts';
 import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
-import Ambience from '@/components/LightingComp/Ambience';
 import CountMeter from '@/components/LightingComp/CountMeter';
 
 const page = () => {
@@ -14,7 +15,7 @@ const page = () => {
         <main>
             <BannerImg imageBg={imageBg} bannerTitle={bannerTitle} bannerDescription={bannerDescription} />
             <section className='py-20 bg-black text-white'>
-                <Ambience />
+                <SectionBodyConcepts sectionTitle='Create Your Own Ambience' sectionBodyContentsData={ambienceData} sectionImage="/img/lighting/ambience.jpg" />
             </section>
             <section className='py-20 bg-black text-white'>
                 <CountMeter />

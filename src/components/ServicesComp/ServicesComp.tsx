@@ -10,7 +10,7 @@ const ServicesComp = () => {
                 {servicesCompData?.map((data, index) => {
                     return (
                         <div key={index} className="bg-white py-14 px-6 border-b-8 border-[#35c36f]">
-                            <img loading="lazy" width={75} src={data?.icon} alt="" />
+                            <img loading="lazy" width={75} src={data?.icon} alt="icon" />
                             <h4 className="mb-5 mt-7 text-2xl">{data?.title}</h4>
                             <p>{data?.description}</p>
                         </div>

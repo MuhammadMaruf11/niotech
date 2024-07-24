@@ -1,34 +1,34 @@
 export const conceptItemImgData = [
   {
-    url: "",
+    url: "/lighting",
     img: "/img/concepts/smartlighting.jpg",
   },
   {
-    url: "",
+    url: "/home-security",
     img: "/img/concepts/Intelligent_Home_Security.jpg",
   },
   {
-    url: "",
+    url: "/interactive-home",
     img: "/img/concepts/Interactive_Home.jpg",
   },
   {
-    url: "",
+    url: "/multimedia",
     img: "/img/concepts/multimedia.jpg",
   },
   {
-    url: "",
+    url: "/energy-efficiency",
     img: "/img/concepts/Energy_Efficiency_Smartify-1.jpg",
   },
   {
-    url: "",
+    url: "/protection",
     img: "/img/concepts/Protection-1.jpg",
   },
   {
-    url: "",
+    url: "/climate",
     img: "/img/concepts/Climate_Control.jpg",
   },
   {
-    url: "",
+    url: "/surveillances",
     img: "/img/concepts/Surveillance_System.jpg",
   },
 ];

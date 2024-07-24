@@ -22,8 +22,8 @@ const Design = () => {
                 <p>Electrical design is one of the most critical elements of successful engineering projects.</p>
             </div>
             <div className='space-y-5'>
-                <img src="/img/services/design1.jpg" alt="" />
-                <img src="/img/services/design2.jpg" alt="" />
+                <img loading='lazy' src="/img/services/design1.jpg" alt="service_design_1" />
+                <img loading='lazy' src="/img/services/design2.jpg" alt="service_design_2" />
             </div>
         </div>
     );

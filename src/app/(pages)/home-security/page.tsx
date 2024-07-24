@@ -1,4 +1,9 @@
+import { homeSecurityBodyFirst, homeSecurityBodySecond, homeSecurityBodyThird, homeSecurityData } from '@/allData/homeSecurityData';
 import BannerImg from '@/components/common/Banner/BannerImg';
+import SectionBodyConcepts from '@/components/common/Section/SectionBodyConcepts';
+import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
+import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
+import InsideSecuritySystem from '@/components/InsideSecuritySystem/InsideSecuritySystem';
 import React from 'react';
 
 const HomeSecurity = () => {
@@ -8,6 +13,19 @@ const HomeSecurity = () => {
     return (
         <main>
             <BannerImg imageBg={imageBg} bannerTitle={bannerTitle} bannerDescription={bannerDescription} />
+            <InsideSecuritySystem />
+            <section className='py-20 bg-[#2196f3] text-white'>
+                <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodyFirst} sectionTitleOne="What is Home Security System?" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Smart-Home-Owners.png" />
+            </section>
+            <section className='py-20'>
+                <SectionBodyConcepts sectionTitle='Easy Control and Monitoring. Instant Alerts – Anywhere, Anytime' sectionBodyContentsData={homeSecurityData} sectionImage="/img/home-security/output_8vMspw-1.gif" />
+            </section>
+            <section className='py-20'>
+                <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodySecond} sectionTitleOne="Always stay informed about visitors at yourdoor" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Answer-Your-Door-From-Your-Smartphone-with-SkyBell-565x240.jpg" />
+            </section>
+            <section className='py-20'>
+                <SectionBodyLeft sectionBodyDescriptionsData={homeSecurityBodyThird} sectionTitleOne="Do I Need a Home Security System?" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/mother-playing-with-daughter.png" />
+            </section>
         </main>
     );
 };

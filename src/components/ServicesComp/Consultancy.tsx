@@ -4,7 +4,7 @@ const Consultancy = () => {
     return (
         <>
             <div>
-                <img className='float-left max-w-96 me-4 mb-4' src="/img/services/Consultancy.jpg" alt="consultancy" />
+                <img loading='lazy' className='float-left max-w-96 me-4 mb-4' src="/img/services/Consultancy.jpg" alt="consultancy" />
             </div>
             <div className="space-y-4">
                 <h5 className='text-[#e9b021]'>Consultancy</h5>
