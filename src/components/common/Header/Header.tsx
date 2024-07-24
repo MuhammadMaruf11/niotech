@@ -38,13 +38,35 @@ const Header = () => {
       <div className="sticky top-auto z-50 w-full shadow-sm ">
         <ul className="">
           {navbarData?.map((data, index) => {
-            const { title, url } = data;
+            const { title, url, subMenu, icon } = data;
             return (
-              <li key={index} className="border-b">
-                <Link onClick={() => setMenuBtn(!menuBtn)} href={url} className="w-full block p-2 my-0.5 text-sm">
-                  {title}
-                </Link>
-              </li>
+              <>
+                <li key={index} className="border-b  group relative transition-all duration-300 ease-linear">
+                  {url === "" ? <Link href={url} className="w-full block p-2 my-0.5 text-sm">
+                    {title}
+                  </Link> : title === "Blog" ? <Link target="_blank" onClick={() => setMenuBtn(!menuBtn)} href={url} className="w-full block p-2 my-0.5 text-sm">
+                    {title}
+                  </Link> : <Link onClick={() => setMenuBtn(!menuBtn)} href={url} className="w-full block p-2 my-0.5 text-sm">
+                    {title}
+                  </Link>}
+                </li>
+                {icon && <i className={icon}></i>}
+                {
+                  subMenu && <ul className="bg-white min-w-60 shadow-lg absolute top-auto left-0 h-0 group-hover:h-max transition-all duration-300 ease-linear overflow-hidden">
+                    {subMenu?.map((data, index) => {
+                      const { title, url, icon } = data;
+                      return (
+                        <li key={index} className="text-start">
+                          <Link onClick={() => setMenuBtn(!menuBtn)} href={url} className='py-3 px-6 hover:bg-stone-100 transition-all duration-300 ease-linear font-medium flex items-center gap-2 border-b-4 border-transparent'>
+                            <img loading="lazy" src={icon} alt="submenu_icon" />
+                            <span> {title}</span>
+                          </Link>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                }
+              </>
             )
           })}
         </ul>

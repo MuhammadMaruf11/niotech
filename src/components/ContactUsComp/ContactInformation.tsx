@@ -10,7 +10,7 @@ const ContactInformation = () => {
         <section className='py-12 bg-[#64bf64]'>
             <SectionTitle titleHeading={titleHeading} />
             <div className="container mx-auto lg:max-w-screen-lg px-3">
-                <div className="grid grid-cols-3 xl:gap-16 gap-6">
+                <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-16 gap-6">
                     {contactInformationData?.map((data, index) => {
                         const { icon, title, paraOne, paraTwo } = data;
                         return (<div className="flex flex-col mb-5 text-center items-center p-12 justify-between bg-white" key={index}>

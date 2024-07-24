@@ -16,8 +16,8 @@ interface sectionProps {
 
 const SectionBodyLeft: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, sectionTitileColorOne, sectionTitileColorTwo, sectionImage, sectionBodyDescriptionsData }) => {
     return (
-        <div className='container mx-auto max-w-screen-xl'>
-            <div className="grid grid-cols-2 gap-6">
+        <div className='container mx-auto max-w-screen-xl px-3'>
+            <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                     <h3 className='mb-2'>{sectionTitleOne && sectionTitleOne}
                         {sectionTitileColorOne && <strong className='text-[#0c71c3]'>{sectionTitileColorOne}</strong>}
@@ -35,7 +35,7 @@ const SectionBodyLeft: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, s
                     </div>
                 </div>
                 <div>
-                    <img loading="lazy" src={sectionImage} alt="section_left_side" />
+                    <img className='mx-auto' loading="lazy" src={sectionImage} alt="section_left_side" />
                 </div>
             </div>
         </div>

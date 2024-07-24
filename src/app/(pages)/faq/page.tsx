@@ -5,7 +5,7 @@ const FAQ = () => {
 
     return (
         <main>
-            <section style={{ backgroundImage: "url(img/bg/banner-faq.jpg)" }} className="bg-cover bg-top relative bg-no-repeat py-60"></section>
+            <section className="bg-[url('/img/bg/banner-faq.jpg')] bg-cover bg-center relative bg-no-repeat py-60"></section>
             <FaqComp />
         </main>
     );

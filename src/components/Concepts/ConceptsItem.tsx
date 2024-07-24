@@ -4,11 +4,11 @@ import Link from "next/link";
 
 const ConceptsItem = () => {
     return (
-        <div className="grid grid-cols-3 gap-6 mb-4">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-4">
             {conceptItemImgData?.map((data, index) => {
                 return (<div key={index}>
                     <Link href={data?.url}>
-                        <img loading="lazy" src={data?.img} alt="concept" />
+                        <img loading="lazy" className="min-w-full lg:h-[220px] md:h-64" src={data?.img} alt="concept" />
                     </Link>
                 </div>)
             })}

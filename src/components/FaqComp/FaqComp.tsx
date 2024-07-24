@@ -4,7 +4,7 @@ import React from 'react';
 const FaqComp = () => {
     return (
         <section className='py-12'>
-            <div className='mx-auto max-w-screen-xl'>
+            <div className='mx-auto max-w-screen-xl px-3'>
                 <h4 className='mb-12 text-center text-gray-800 font-semibold'>Frequently Asked Questions</h4>
                 <div className="space-y-4">
                     {faqData?.map((data, index) => {

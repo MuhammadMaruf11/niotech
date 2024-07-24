@@ -15,7 +15,7 @@ interface sectionProps {
 const SectionHeading: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, sectionTitleColorOne, sectionTitleColorTwo, sectionDescriptionsData }) => {
     return (
         <section className='py-12'>
-            <div className="container mx-auto max-w-screen-xl">
+            <div className="container mx-auto max-w-screen-xl px-3">
                 <h2 className='text-center mb-4 text-3xl'>{sectionTitleOne && sectionTitleOne}
                     {sectionTitleColorOne && <strong className='text-[#0c71c3]'>{sectionTitleColorOne}</strong>}
                     {sectionTitleTwo && sectionTitleTwo}

@@ -15,16 +15,16 @@ const ServicesNavTab = () => {
         <section className='py-20'>
             <div className="max-w-screen-xl px-3 mx-auto">
                 <Tabs className='grid grid-cols-12 gap-6'>
-                    <TabList className="flex flex-col col-span-3">
+                    <TabList className="flex lg:flex-col md:flex-row lg:mx-0 mx-0 md:mx-auto flex-col lg:col-span-3 col-span-12">
                         {serviceTabData.map((data, index) => (
-                            <Tab key={index} className="p-3.5 hover:bg-gray-100 transition-all duration-300 ease-linear cursor-pointer border border-gray-300 rounded-md hover:text-gray-700">
+                            <Tab key={index} className="lg:p-3.5 p-2 hover:bg-gray-100 transition-all duration-300 ease-linear cursor-pointer border border-gray-300 rounded-md hover:text-gray-700">
                                 {data.title}
                             </Tab>
                         ))}
                     </TabList>
 
 
-                    <div className="col-span-9">
+                    <div className="lg:col-span-9 col-span-12">
                         <TabPanel >
                             <Consultancy />
                         </TabPanel>

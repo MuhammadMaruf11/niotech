@@ -3,7 +3,7 @@ import { serviceDesignData } from '@/allData/serviceDesignData';
 
 const Design = () => {
     return (
-        <div className='grid grid-cols-2 gap-6'>
+        <div className='grid md:grid-cols-2 gap-6'>
             <div>
                 <h5 className='text-[#e9b021]'>Design</h5>
                 <strong>Drafting services for all aspects of 2D & 3D</strong>

@@ -16,10 +16,10 @@ interface sectionProps {
 
 const SectionBodyRight: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, sectionTitileColorOne, sectionTitileColorTwo, sectionImage, sectionBodyDescriptionsData }) => {
     return (
-        <div className='container mx-auto max-w-screen-xl'>
-            <div className="grid grid-cols-2 gap-6">
+        <div className='container mx-auto max-w-screen-xl px-3'>
+            <div className="grid lg:grid-cols-2 gap-6">
                 <div>
-                    <img loading="lazy" src={sectionImage} alt="section_right_side" />
+                    <img className='mx-auto' loading="lazy" src={sectionImage} alt="section_right_side" />
                 </div>
                 <div>
                     <h3 className='mb-2'>{sectionTitleOne && sectionTitleOne}

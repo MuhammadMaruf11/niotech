@@ -15,8 +15,8 @@ interface sectionProps {
 
 const SectionBodyConcepts: FC<sectionProps> = ({ sectionTitle, sectionImage, sectionBodyContentsData }) => {
     return (
-        <div className='container mx-auto max-w-screen-xl'>
-            <div className="grid grid-cols-2 gap-6">
+        <div className='container mx-auto max-w-screen-xl px-3'>
+            <div className="grid lg:grid-cols-2 gap-6">
                 <div>
                     <h3 className='mb-10'>
                         {sectionTitle && sectionTitle}
@@ -39,7 +39,7 @@ const SectionBodyConcepts: FC<sectionProps> = ({ sectionTitle, sectionImage, sec
                     </div>
                 </div>
                 <div>
-                    <img loading="lazy" src={sectionImage} alt="section_body" />
+                    <img className='mx-auto' loading="lazy" src={sectionImage} alt="section_body" />
                 </div>
             </div>
         </div>

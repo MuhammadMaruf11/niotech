@@ -23,7 +23,7 @@ const ContactForm = () => {
         <section className='py-12'>
             <div className="container mx-auto max-w-screen-lg px-3">
                 <div className="grid gap-6 grid-cols-12">
-                    <div className="col-span-8">
+                    <div className="lg:col-span-8 col-span-12">
                         <div className="mb-6">
                             <h4 className="mb-2">Online Enquiry</h4>
                             <p>Please fill the following form and send to us:</p>
@@ -61,7 +61,7 @@ const ContactForm = () => {
                             )}
                         </Formik>
                     </div>
-                    <div className="col-span-4">
+                    <div className="lg:col-span-4 col-span-12">
                         <div className="mb-6">
                             <h4 className="mb-2">Address:</h4>
                         </div>

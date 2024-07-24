@@ -7,8 +7,8 @@ import Link from "next/link";
 const Footer = () => {
 
   return (
-    <footer className="bg-[url('/img/bg/footer-map.png')] bg-center bg-no-repeat pt-24 bg-[#161827]">
-      <div className="pb-28">
+    <footer className="bg-[url('/img/bg/footer-map.png')] bg-center bg-no-repeat bg-[#161827]">
+      <div className="lg:py-28 md:py-16 py-12">
         <div className="mx-auto grid md:grid-cols-2 max-w-screen-xl lg:grid-cols-4 gap-6 px-3">
           <div className=" text-white">
             <Link href="/">
@@ -16,7 +16,7 @@ const Footer = () => {
             </Link>
             <p className="pt-5 text-justify">NIOTECH SMART is a system integrator, whose work is characterized by a steady stream of innovations that significantly influence the latest trends in automation.</p>
           </div>
-          <div className=" text-white pl-14">
+          <div className=" text-white lg:pl-14">
             <h3 className="mb-8 text-white text-2xl font-semibold">Services</h3>
             <ul className="space-y-4">
               {footerServicesData?.map((data, index) => {
@@ -62,7 +62,7 @@ const Footer = () => {
       </div>
       <div className="bg-[#ffffff1a] text-[#b7bbc1] py-5 shadow-lg">
         <div className="mx-auto max-w-screen-xl px-3">
-          <p><Link href="/" className="text-white">The Niotech</Link> © 2023 All Right Reserved</p>
+          <p className="lg:text-left text-center"><Link href="/" className="text-white">The Niotech</Link> © 2023 All Right Reserved</p>
         </div>
       </div>
     </footer>

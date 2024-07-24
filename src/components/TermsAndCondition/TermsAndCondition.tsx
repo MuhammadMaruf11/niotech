@@ -7,7 +7,7 @@ const TermsAndCondition = () => {
             <div className='max-w-screen-lg mx-auto px-3'>
                 <div className="space-y-8">
                     <div className="mb-20">
-                        <h2 className='font-bold text-gray-800'>Terms And Condition</h2>
+                        <h2 className='font-bold md:text-4xl text-3xl text-gray-800'>Terms And Condition</h2>
                         <p>In the below write-up, “we” or “us” refers to <strong>Niotech Smart Solutions Ltd.</strong> and “you” refers to the consumer or the site visitor. The Terms and Conditions are liable to be changed without any prior notice and it is the responsibility of the user to stay updated with changes if any.</p>
                         <h4 className='mt-3'>NO WARRANTIES</h4>
                     </div>
