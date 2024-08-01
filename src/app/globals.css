@@ -2,57 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-.heading-color {
-  color: #333;
-}
-
-.body-color {
-  color: #666;
-}
-
+/* Base Styles */
 @layer base {
   body {
-    @apply font-normal body-color;
+    @apply font-normal text-gray-600;
   }
-
-  /* h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply heading-color;
-  } */
 
   h1 {
-    @apply text-5xl;
+    @apply text-5xl font-bold;
   }
   h2 {
-    @apply text-4xl;
+    @apply text-4xl font-bold;
   }
   h3 {
-    @apply text-3xl;
+    @apply text-3xl font-semibold;
   }
   h4 {
-    @apply text-2xl;
+    @apply text-2xl font-semibold;
   }
   h5 {
-    @apply text-xl;
+    @apply text-xl font-medium;
   }
   h6 {
-    @apply text-lg;
+    @apply text-lg font-medium;
+  }
+
+  a {
+    @apply transition-all duration-300 ease-linear;
   }
 
   input,
   textarea {
-    @apply border py-2 ps-3 rounded outline-none border-gray-300 w-full;
+    @apply border border-gray-300 py-2 px-3 rounded outline-none w-full;
   }
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Custom Components */
+@layer components {
   .btn-theme {
     @apply bg-theme text-white py-2 px-5 rounded hover:bg-theme-hover transition duration-300;
   }
@@ -68,8 +54,42 @@
   .banner-overlay {
     @apply bg-black bg-opacity-75 absolute inset-0 p-0 m-0;
   }
+}
+
+/* Custom Utilities */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
 
   .error {
     @apply text-red-500 text-xs;
   }
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fff !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #fff !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 24px;
+  color: white !important;
+}
+
+.swiper-button-prev {
+  left: 120px !important;
+}
+
+.swiper-button-next {
+  right: 120px !important;
 }

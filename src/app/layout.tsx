@@ -7,6 +7,7 @@ import "./globals.css";
 import "../assets/css/fontawesome.min.css";
 
 import { FC, ReactNode } from 'react';
+import Motion from '@/components/ui/Motion/Motion';
 
 // Metadata for the application
 export const metadata = {
@@ -23,7 +24,9 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
     <html lang="en">
       <body >
         <Header />
-        {children}
+        <Motion>
+          {children}
+        </Motion>
         <Footer />
       </body>
     </html>

@@ -2,7 +2,6 @@
   "name": "niotech",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,11 +10,13 @@
   },
   "dependencies": {
     "formik": "^2.4.6",
+    "framer-motion": "^11.3.21",
     "next": "14.2.5",
     "react": "^18",
     "react-countup": "^6.5.3",
     "react-dom": "^18",
     "react-tabs": "^6.0.2",
+    "swiper": "^11.1.9",
     "yup": "^1.4.0"
   },
   "devDependencies": {

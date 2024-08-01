@@ -10,14 +10,10 @@ const CountMeter = () => {
                     const { color, title, number } = data;
                     return (
                         <div key={index} className="flex flex-col items-center">
-                            <CountUp start={0} end={number} delay={1}>
-                                {({ countUpRef }) => (
-                                    <div className='text-7xl mb-5' style={{ color: color }}>
-                                        <span ref={countUpRef} />
-                                        {index === countMeterData?.length - 1 && '%'}
-                                    </div>
-                                )}
-                            </CountUp>
+                            <div className='text-7xl mb-5' style={{ color }}>
+                                <CountUp end={number} duration={2} />
+                                {index === countMeterData.length - 1 && '%'}
+                            </div>
                             <h6>{title}</h6>
                         </div>
                     )

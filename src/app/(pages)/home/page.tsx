@@ -5,7 +5,7 @@ import BannerSlider from "@/components/common/Banner/BannerSlider";
 const Home = () => {
     return (
         <main>
-            <BannerSlider />
+            {/* <BannerSlider /> */}
             <WhoWeAre />
             <Concepts />
         </main>

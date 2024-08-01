@@ -1,3 +1,4 @@
+import ClientExperience from "@/components/ClientExperience/ClientExperience";
 import HowItWorks from "@/components/HowItWorks/HowItWorks";
 import ServicesComp from "@/components/ServicesComp/ServicesComp";
 import VideoComp from "@/components/Video/VideoComp";
@@ -14,6 +15,7 @@ export default function Home() {
       <ServicesComp />
       <HowItWorks />
       <WhyNiotech />
+      <ClientExperience />
     </main>
   )
 }
