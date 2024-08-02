@@ -14,13 +14,14 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
+import SectionTitleWhite from '../ui/SectionTitle/SectionTitleWhite';
+
+const titleHeading = 'client experiences'
 
 const ClientExperience = () => {
     return (
         <section className="bg-[#282828] py-12">
-            <div className="mb-20 after:content-[''] after:bg-gray-300 after:w-10 after:h-px after:absolute relative after:left-1/2 after:top-12 after:-translate-x-1/2">
-                <h3 className="text-center font-bold text-white uppercase">client experiences</h3>
-            </div>
+            <SectionTitleWhite titleHeading={titleHeading} />
             <Swiper
                 spaceBetween={10}
                 centeredSlides={true}
@@ -46,7 +47,7 @@ const ClientExperience = () => {
                     return (
                         <SwiperSlide key={index} className="">
                             <div className="max-w-screen-md mx-auto inset-0 flex flex-col items-center text-center justify-center px-3 text-white">
-                                <div className="relative h-60">
+                                <div className="relative h-48">
                                     {speech && (
                                         <motion.p
                                             className="relative font-serif italic mb-4 px-14"

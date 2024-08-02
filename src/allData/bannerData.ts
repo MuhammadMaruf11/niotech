@@ -1,4 +1,4 @@
-export const bannerSilderData = [
+export const bannerData = [
   {
     image: "/img/bg/banner-1.jpg",
     subtitle: "FULL AUTOMATION ",

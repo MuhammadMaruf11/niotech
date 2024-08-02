@@ -1,6 +1,5 @@
 'use client'
 /* eslint-disable @next/next/no-img-element */
-import { bannerSilderData } from "@/allData/bannerSliderData";
 import Link from "next/link";
 import { FC } from "react";
 
@@ -16,14 +15,26 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
+interface bannerDataType {
+    image: string;
+    subtitle: string;
+    title: string;
+    content: string;
+    link: string;
+}
+
+interface bannerProps {
+    bannerSilderData: bannerDataType[]
+}
+
 
 import { motion } from 'framer-motion';
 
-const BannerSlider: FC = () => {
+const BannerSlider: FC<bannerProps> = ({ bannerSilderData }) => {
     return (
         <section className="">
             <Swiper
-                spaceBetween={10}
+                spaceBetween={0}
                 centeredSlides={true}
                 slidesPerView={1}
                 autoplay={{
