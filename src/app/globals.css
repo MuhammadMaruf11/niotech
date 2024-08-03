@@ -91,35 +91,3 @@
     @apply opacity-100 visible h-auto;
   }
 }
-
-.swiper-pagination-bullet {
-  background-color: white !important;
-}
-
-.swiper-pagination-bullet-active {
-  background-color: #fff !important;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  color: #fff !important;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 24px;
-  color: white !important;
-}
-
-.swiper-button-prev {
-  left: 120px !important;
-}
-
-.swiper-button-next {
-  right: 120px !important;
-}
-
-.react-tabs__tab--selected {
-  background-color: #000 !important;
-  color: #fff !important;
-}

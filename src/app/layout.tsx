@@ -3,6 +3,7 @@ import Header from '@/components/common/Header/Header';
 import Footer from '@/components/common/Footer/Footer';
 
 import "./globals.css";
+import "./custom.css";
 
 import "../assets/css/fontawesome.min.css";
 
