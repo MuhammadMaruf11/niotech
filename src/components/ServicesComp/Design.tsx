@@ -1,10 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
+'use client'
+import { motion } from 'framer-motion';
 import { serviceDesignData } from '@/allData/serviceDesignData';
+
+const textVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+};
+
+const imageVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+};
 
 const Design = () => {
     return (
         <div className='grid md:grid-cols-2 gap-6'>
-            <div>
+            <motion.div
+                variants={textVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.8, ease: "easeOut" }}
+            >
                 <h5 className='text-[#e9b021]'>Design</h5>
                 <strong>Drafting services for all aspects of 2D & 3D</strong>
                 <div className="space-y-4">
@@ -20,10 +36,26 @@ const Design = () => {
                     })}
                 </ul>
                 <p>Electrical design is one of the most critical elements of successful engineering projects.</p>
-            </div>
+            </motion.div>
             <div className='space-y-5'>
-                <img loading='lazy' src="/img/services/design1.jpg" alt="service_design_1" />
-                <img loading='lazy' src="/img/services/design2.jpg" alt="service_design_2" />
+                <motion.img
+                    loading='lazy'
+                    src="/img/services/design1.jpg"
+                    alt="service_design_1"
+                    variants={imageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                />
+                <motion.img
+                    loading='lazy'
+                    src="/img/services/design2.jpg"
+                    alt="service_design_2"
+                    variants={imageVariants}
+                    initial="hidden"
+                    animate="visible"
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                />
             </div>
         </div>
     );

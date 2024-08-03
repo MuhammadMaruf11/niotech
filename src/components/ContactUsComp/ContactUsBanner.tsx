@@ -1,10 +1,20 @@
-
+'use client';
+import { motion } from 'framer-motion';
 
 const ContactUsBanner = () => {
-    return (
-        <section className="bg-[url('/img/bg/banner-contact-us.jpg')] bg-cover bg-top  bg-no-repeat h-[450px]">
+    const animationProps = {
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        transition: { duration: 1 }
+    };
 
-        </section>
+    return (
+        <motion.section
+            className="bg-[url('/img/bg/banner-contact-us.jpg')] bg-cover bg-top bg-no-repeat h-[450px]"
+            {...animationProps}
+        >
+            {/* Additional content or overlay can be added here */}
+        </motion.section>
     );
 };
 

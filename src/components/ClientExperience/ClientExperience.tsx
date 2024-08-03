@@ -1,4 +1,4 @@
-'use client'
+'use client';
 /* eslint-disable @next/next/no-img-element */
 
 import { clientExperienceData } from '@/allData/clientExperienceData';
@@ -16,7 +16,12 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination } from 'swiper/modules';
 import SectionTitleWhite from '../ui/SectionTitle/SectionTitleWhite';
 
-const titleHeading = 'client experiences'
+const titleHeading = 'client experiences';
+
+const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0 },
+};
 
 const ClientExperience = () => {
     return (
@@ -51,8 +56,9 @@ const ClientExperience = () => {
                                     {speech && (
                                         <motion.p
                                             className="relative font-serif italic mb-4 px-14"
-                                            initial={{ opacity: 0, y: 50 }}
-                                            animate={{ opacity: 1, y: 0 }}
+                                            variants={fadeInUp}
+                                            initial="hidden"
+                                            animate="visible"
                                             transition={{ duration: 0.5, delay: 0.2 }}
                                         >
                                             <span className="absolute text-yellow-500 text-7xl leading-none top-0 left-0">&quot;</span>
@@ -62,8 +68,9 @@ const ClientExperience = () => {
                                     )}
                                     <motion.h3
                                         className="text-xl text-yellow-500 font-semibold tracking-wide mt-8 mb-2"
-                                        initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
+                                        variants={fadeInUp}
+                                        initial="hidden"
+                                        animate="visible"
                                         transition={{ duration: 0.5 }}
                                     >
                                         - {name}
@@ -71,8 +78,9 @@ const ClientExperience = () => {
                                     {designation && (
                                         <motion.div
                                             className="block font-normal text-gray-500 text-xs normal-case pl-2"
-                                            initial={{ opacity: 0, y: 50 }}
-                                            animate={{ opacity: 1, y: 0 }}
+                                            variants={fadeInUp}
+                                            initial="hidden"
+                                            animate="visible"
                                             transition={{ duration: 0.5, delay: 0.4 }}
                                         >
                                             {designation}
@@ -80,7 +88,6 @@ const ClientExperience = () => {
                                     )}
                                 </div>
                             </div>
-
                         </SwiperSlide>
                     );
                 })}

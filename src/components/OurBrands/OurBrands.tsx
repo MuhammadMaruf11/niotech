@@ -14,8 +14,15 @@ import 'swiper/css/navigation';
 import { Autoplay } from 'swiper/modules';
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
 import { ourBrandsData } from "@/allData/ourBrandsData";
+import { motion } from 'framer-motion';
 
-const titleHeading = 'Our Brands'
+const titleHeading = 'Our Brands';
+
+const slideVariants = {
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
+    exit: { opacity: 0, scale: 0.8 },
+};
 
 const OurBrands = () => {
     return (
@@ -54,12 +61,16 @@ const OurBrands = () => {
                     const { img } = data;
                     return (
                         <SwiperSlide key={index} className="py-6">
-                            <div className="inset-0 flex flex-col items-center text-center justify-center text-white">
-                                <div className="">
-                                    <img className="w-full" src={img} alt={`product-${index}`} />
-                                </div>
-                            </div>
-
+                            <motion.div
+                                variants={slideVariants}
+                                initial="initial"
+                                animate="animate"
+                                exit="exit"
+                                transition={{ duration: 0.6, ease: "easeInOut" }}
+                                className="flex flex-col items-center text-center justify-center text-white"
+                            >
+                                <img className="w-full" src={img} alt={`product-${index}`} />
+                            </motion.div>
                         </SwiperSlide>
                     );
                 })}

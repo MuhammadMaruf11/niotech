@@ -1,10 +1,16 @@
+'use client';
 import { contactInformationData } from "@/allData/contactInformationData";
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
-
+import { motion } from 'framer-motion';
 
 const ContactInformation = () => {
+    const titleHeading = 'Contact Information';
 
-    const titleHeading = 'Contact Information'
+    const animationProps = {
+        initial: { opacity: 0, y: 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: 0.5 }
+    };
 
     return (
         <section className='py-12 bg-[#64bf64]'>
@@ -13,12 +19,19 @@ const ContactInformation = () => {
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-16 gap-6">
                     {contactInformationData?.map((data, index) => {
                         const { icon, title, paraOne, paraTwo } = data;
-                        return (<div className="flex flex-col mb-5 text-center items-center p-12 justify-between bg-white" key={index}>
-                            <i className={`${icon} text-[#4ec2e7] text-5xl`}></i>
-                            <h5 className="my-9 font-semibold">{title}</h5>
-                            <p className="mb-4">{paraOne}</p>
-                            <p>{paraTwo}</p>
-                        </div>)
+                        return (
+                            <motion.div
+                                className="flex flex-col mb-5 text-center items-center p-12 justify-between bg-white"
+                                key={index}
+                                {...animationProps}
+                                transition={{ ...animationProps.transition, delay: index * 0.2 }} // Delay for sequential animation
+                            >
+                                <i className={`${icon} text-[#4ec2e7] text-5xl`} />
+                                <h5 className="my-9 font-semibold">{title}</h5>
+                                <p className="mb-4">{paraOne}</p>
+                                <p>{paraTwo}</p>
+                            </motion.div>
+                        );
                     })}
                 </div>
             </div>

@@ -1,4 +1,5 @@
 'use client'
+import { motion } from 'framer-motion';
 import { serviceTabData } from '@/allData/serviceTabData';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Consultancy from './Consultancy';
@@ -8,9 +9,12 @@ import Programming from './Programming';
 import Support from './Support';
 import SmartCare from './SmartCare';
 
+const panelVariants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1 },
+};
+
 const ServicesNavTab = () => {
-
-
     return (
         <section className='py-20'>
             <div className="max-w-screen-xl px-3 mx-auto">
@@ -23,33 +27,73 @@ const ServicesNavTab = () => {
                         ))}
                     </TabList>
 
-
                     <div className="lg:col-span-9 col-span-12">
-                        <TabPanel >
-                            <Consultancy />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <Consultancy />
+                            </motion.div>
                         </TabPanel>
 
-                        <TabPanel >
-                            <Design />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <Design />
+                            </motion.div>
                         </TabPanel>
 
-                        <TabPanel >
-                            <Installation />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <Installation />
+                            </motion.div>
                         </TabPanel>
 
-                        <TabPanel >
-                            <Programming />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <Programming />
+                            </motion.div>
                         </TabPanel>
 
-                        <TabPanel >
-                            <Support />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <Support />
+                            </motion.div>
                         </TabPanel>
 
-                        <TabPanel >
-                            <SmartCare />
+                        <TabPanel>
+                            <motion.div
+                                variants={panelVariants}
+                                initial="hidden"
+                                animate="visible"
+                                transition={{ duration: 0.5, ease: "easeOut" }}
+                            >
+                                <SmartCare />
+                            </motion.div>
                         </TabPanel>
                     </div>
-
                 </Tabs>
             </div>
         </section>

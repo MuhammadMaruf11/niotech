@@ -5,6 +5,7 @@ import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
 import SectionTabNav from '@/components/common/Section/SectionTabNav';
 import InsideSecuritySystem from '@/components/InsideSecuritySystem/InsideSecuritySystem';
+import SecurityAlarm from '@/components/SecurityAlarm/SecurityAlarm';
 import React from 'react';
 
 const HomeSecurity = () => {
@@ -32,6 +33,9 @@ const HomeSecurity = () => {
             </section>
             <section className='py-20'>
                 <SectionBodyConcepts sectionTitle='Easy Control and Monitoring. Instant Alerts – Anywhere, Anytime' sectionBodyContentsData={homeSecurityData} sectionImage="/img/home-security/output_8vMspw-1.gif" />
+            </section>
+            <section className='py-20'>
+                <SecurityAlarm />
             </section>
             <section className='py-20'>
                 <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodySecond} sectionTitleOne="Always stay informed about visitors at yourdoor" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Answer-Your-Door-From-Your-Smartphone-with-SkyBell-565x240.jpg" />

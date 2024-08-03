@@ -35,6 +35,10 @@
   textarea {
     @apply border border-gray-300 py-2 px-3 rounded outline-none w-full;
   }
+
+  section {
+    @apply overflow-hidden;
+  }
 }
 
 /* Custom Components */
@@ -64,6 +68,27 @@
 
   .error {
     @apply text-red-500 text-xs;
+  }
+
+  /* Navbar Styles */
+  .submenu {
+    @apply transition-max-height-opacity duration-300 ease-in-out max-h-0 opacity-0 overflow-hidden;
+  }
+
+  .submenu-open {
+    @apply max-h-submenu opacity-100; /* Use the custom max-height utility */
+  }
+
+  .navbar-item {
+    @apply relative;
+  }
+
+  .navbar-item ul {
+    @apply opacity-0 invisible h-0 overflow-hidden transition-opacity duration-300 ease-linear;
+  }
+
+  .navbar-item:hover ul {
+    @apply opacity-100 visible h-auto;
   }
 }
 

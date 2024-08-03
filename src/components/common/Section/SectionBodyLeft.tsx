@@ -1,5 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
+"use client";
 import { FC } from 'react';
+import { motion } from 'framer-motion';
 
 interface SectionDescription {
     paragraph: string;
@@ -18,25 +20,45 @@ const SectionBodyLeft: FC<sectionProps> = ({ sectionTitleOne, sectionTitleTwo, s
     return (
         <div className='container mx-auto max-w-screen-xl px-3'>
             <div className="grid lg:grid-cols-2 gap-6">
-                <div>
-                    <h3 className='mb-2'>{sectionTitleOne && sectionTitleOne}
+                <motion.div
+                    className=""
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, ease: "easeOut" }}
+                >
+                    <h3 className='mb-2'>
+                        {sectionTitleOne && sectionTitleOne}
                         {sectionTitileColorOne && <strong className='text-[#0c71c3]'>{sectionTitileColorOne}</strong>}
                         {sectionTitleTwo && sectionTitleTwo}
                         {sectionTitileColorTwo && <strong className='text-[#00b202]'>{sectionTitileColorTwo}</strong>}
                     </h3>
-                    <div className="space-y-4">
+                    <motion.div
+                        className="space-y-4"
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
                         {sectionBodyDescriptionsData?.map((data, index) => {
                             return (
-                                <p key={index}>
+                                <motion.p
+                                    key={index}
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: 0.1 * index }}
+                                >
                                     {data?.paragraph}
-                                </p>
+                                </motion.p>
                             )
                         })}
-                    </div>
-                </div>
-                <div>
+                    </motion.div>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.6 }}
+                >
                     <img className='mx-auto' loading="lazy" src={sectionImage} alt="section_left_side" />
-                </div>
+                </motion.div>
             </div>
         </div>
     );

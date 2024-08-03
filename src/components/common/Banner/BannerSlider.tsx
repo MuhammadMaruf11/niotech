@@ -1,9 +1,9 @@
-'use client'
+'use client';
 /* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 import { FC } from "react";
 
-// import swiper slide
+// Import swiper slide
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
@@ -12,10 +12,10 @@ import 'swiper/css/zoom';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-// import required modules
+// Import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
-interface bannerDataType {
+interface BannerDataType {
     image: string;
     subtitle: string;
     title: string;
@@ -23,14 +23,13 @@ interface bannerDataType {
     link: string;
 }
 
-interface bannerProps {
-    bannerSilderData: bannerDataType[]
+interface BannerProps {
+    bannerSilderData: BannerDataType[];
 }
-
 
 import { motion } from 'framer-motion';
 
-const BannerSlider: FC<bannerProps> = ({ bannerSilderData }) => {
+const BannerSlider: FC<BannerProps> = ({ bannerSilderData }) => {
     return (
         <section className="">
             <Swiper
@@ -70,8 +69,8 @@ const BannerSlider: FC<bannerProps> = ({ bannerSilderData }) => {
                                     <motion.h4
                                         className="text-2xl mb-4"
                                         initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: 0.2 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.2 }}
                                     >
                                         {subtitle}
                                     </motion.h4>
@@ -79,17 +78,17 @@ const BannerSlider: FC<bannerProps> = ({ bannerSilderData }) => {
                                 <motion.h3
                                     className="text-4xl font-bold mb-4"
                                     initial={{ opacity: 0, y: 50 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ duration: 0.5 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6 }}
                                 >
                                     {title}
                                 </motion.h3>
                                 {content && (
                                     <motion.p
-                                        className=" w-2/5"
+                                        className="w-2/5"
                                         initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: 0.4 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.4 }}
                                     >
                                         {content}
                                     </motion.p>
@@ -98,28 +97,18 @@ const BannerSlider: FC<bannerProps> = ({ bannerSilderData }) => {
                                     <motion.div
                                         className="mt-4"
                                         initial={{ opacity: 0, y: 50 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        transition={{ duration: 0.5, delay: 0.6 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        transition={{ duration: 0.6, delay: 0.6 }}
                                     >
-                                        <Link href={link} className=" inline-block px-10 py-2 border border-white text-white rounded-3xl hover:bg-white hover:text-black">  Read More</Link>
+                                        <Link
+                                            href={link}
+                                            className="inline-block px-10 py-2 border border-white text-white rounded-3xl hover:bg-white hover:text-black"
+                                        >
+                                            Read More
+                                        </Link>
                                     </motion.div>
                                 )}
                             </div>
-
-                            {/* Render specific elements for the slide */}
-                            {/* {elements?.map((el, idx) => (
-                                <motion.div
-                                    key={idx}
-                                    className="absolute"
-                                    initial={{ opacity: 0, x: Math.random() * 100 - 50, y: Math.random() * 100 - 50 }}
-                                    animate={{ opacity: 1, x: 0, y: 0 }}
-                                    transition={{ duration: 0.5, delay: idx * 0.2 }}
-                                    style={{ top: el.top, left: el.left }}
-                                >
-                                    <img src={el.image} alt={`Element ${idx}`} className="w-16 h-16" />
-                                    <p className="text-sm">{el.text}</p>
-                                </motion.div>
-                            ))} */}
                         </SwiperSlide>
                     );
                 })}

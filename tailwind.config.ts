@@ -19,6 +19,12 @@ const config: Config = {
           hover: "#57b957",
         },
       },
+      maxHeight: {
+        submenu: "1000px",
+      },
+      transitionProperty: {
+        "max-height-opacity": "max-height, opacity",
+      },
     },
   },
   plugins: [],
