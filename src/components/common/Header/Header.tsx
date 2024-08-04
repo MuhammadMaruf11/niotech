@@ -1,10 +1,10 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
 import { navbarData } from "@/allData/navbarData";
 import { slide as Menu } from "react-burger-menu";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
+import Image from "next/image";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +27,9 @@ const Header = () => {
       <div className="flex items-center justify-between px-3 py-3 mx-auto">
         <div className="w-2/3 md:w-1/3 lg:w-1/6">
           <Link onClick={closeMenu} href="/">
-            <img
-              loading="lazy"
+            <Image
+              width={250}
+              height={0}
               className="mx-auto lg:mx-0"
               src="/img/logo/logo.png"
               alt="header_logo"
@@ -75,7 +76,7 @@ const Header = () => {
                             transition={{ duration: 0.3, delay: 0.1 * index }}
                           >
                             <Link href={url} className="py-3 px-6 hover:bg-stone-100 transition-all duration-300 ease-linear font-medium flex items-center gap-2 border-b-4 border-transparent">
-                              <img loading="lazy" src={icon} alt="submenu_icon" />
+                              <img src={icon} alt="submenu_icon" />
                               <span> {title}</span>
                             </Link>
                           </motion.li>

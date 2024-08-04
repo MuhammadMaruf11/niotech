@@ -1,7 +1,8 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
 import { FC } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { motion } from 'framer-motion';
 
 // Import swiper slide
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -27,7 +28,6 @@ interface BannerProps {
     bannerSilderData: BannerDataType[];
 }
 
-import { motion } from 'framer-motion';
 
 const BannerSlider: FC<BannerProps> = ({ bannerSilderData }) => {
     return (
@@ -37,7 +37,7 @@ const BannerSlider: FC<BannerProps> = ({ bannerSilderData }) => {
                 centeredSlides={true}
                 slidesPerView={1}
                 autoplay={{
-                    delay: 5000,
+                    delay: 50444400,
                     disableOnInteraction: false,
                 }}
                 pagination={{
@@ -59,12 +59,14 @@ const BannerSlider: FC<BannerProps> = ({ bannerSilderData }) => {
                     return (
                         <SwiperSlide key={index} className="relative">
                             <div className="banner-overlay"></div>
-                            <img
+                            <Image
+                                width={1920}
+                                height={700}
                                 src={image}
                                 alt={`Slide ${index + 1}`}
-                                className="w-full h-[700px] object-cover"
+                                className="lg:h-[700px] h-80 object-cover"
                             />
-                            <div className="absolute max-w-screen-xl mx-auto inset-0 flex flex-col items-start justify-center p-8 text-white">
+                            <div className="absolute max-w-screen-xl mx-auto inset-0 flex flex-col items-start justify-center lg:p-8 px-3 text-white">
                                 {subtitle && (
                                     <motion.h4
                                         className="text-2xl mb-4"

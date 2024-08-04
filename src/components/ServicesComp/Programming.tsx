@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+
 'use client'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -20,9 +21,9 @@ const Programming = () => {
                 initial="hidden"
                 animate="visible"
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className="float-left max-w-96 me-4 mb-4"
+                className="float-left me-4 mb-4"
             >
-                <img loading='lazy' src="/img/services/programming.jpg" alt="programming" />
+                <Image width={400} height={0} src="/img/services/programming.jpg" alt="programming" />
             </motion.div>
             <motion.div
                 variants={textVariants}

@@ -1,8 +1,8 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 interface SectionDescription {
     paragraph: string;
@@ -98,12 +98,12 @@ const SectionTabNav: FC<sectionProps> = ({ sectionMainTitle, sectionSubTitle, se
                                     </div>
                                 </div>
                                 <motion.div
-                                    className='mx-auto max-w-[600px]'
+                                    className='mx-auto'
                                     initial={{ opacity: 0, scale: 0.95 }}
                                     whileInView={{ opacity: 1, scale: 1 }}
                                     transition={{ duration: 0.6 }}
                                 >
-                                    <img loading="lazy" src={data?.sectionTabImage} alt="section_tab_image" />
+                                    <Image width={600} height={0} src={data?.sectionTabImage} alt="section_tab_image" />
                                 </motion.div>
                             </motion.div>
                         </TabPanel>

@@ -1,7 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
+
 'use client'
 import { motion } from 'framer-motion';
 import { servicesCompData } from "@/allData/servicesCompData";
+import Image from 'next/image';
 
 const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -23,7 +24,7 @@ const ServicesComp = () => {
                             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
                             className="bg-white xl:py-14 py-8 xl:px-6 px-4 border-b-8 border-[#35c36f]"
                         >
-                            <img loading="lazy" width={75} src={data?.icon} alt="icon" />
+                            <Image width={75} height={75} src={data?.icon} alt="icon" />
                             <h4 className="mb-5 mt-7 text-2xl">{data?.title}</h4>
                             <p>{data?.description}</p>
                         </motion.div>

@@ -1,5 +1,4 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
 
 import { clientExperienceData } from '@/allData/clientExperienceData';
 import { motion } from 'framer-motion';

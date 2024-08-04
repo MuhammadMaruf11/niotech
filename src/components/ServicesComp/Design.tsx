@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion';
 import { serviceDesignData } from '@/allData/serviceDesignData';
+import Image from 'next/image';
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -38,24 +39,24 @@ const Design = () => {
                 <p>Electrical design is one of the most critical elements of successful engineering projects.</p>
             </motion.div>
             <div className='space-y-5'>
-                <motion.img
-                    loading='lazy'
-                    src="/img/services/design1.jpg"
-                    alt="service_design_1"
+                <motion.div
                     variants={imageVariants}
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                />
-                <motion.img
-                    loading='lazy'
-                    src="/img/services/design2.jpg"
-                    alt="service_design_2"
+                >
+                    <Image width={460} height={0} src="/img/services/design1.jpg"
+                        alt="service_design_1" />
+                </motion.div>
+                <motion.div
                     variants={imageVariants}
                     initial="hidden"
                     animate="visible"
                     transition={{ duration: 0.8, ease: "easeOut" }}
-                />
+                >
+                    <Image width={460} height={0} src="/img/services/design2.jpg"
+                        alt="service_design_2" />
+                </motion.div>
             </div>
         </div>
     );

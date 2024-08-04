@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+
 'use client'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const imageVariants = {
     hidden: { opacity: 0, x: -20 },
@@ -21,7 +22,7 @@ const Support = () => {
                 variants={imageVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
-                <img loading='lazy' className='float-left max-w-96 me-4 mb-4' src="/img/services/support.jpg" alt="support" />
+                <Image width={400} height={0} className='float-left me-4 mb-4' src="/img/services/support.jpg" alt="support" />
             </motion.div>
             <motion.div
                 initial="hidden"

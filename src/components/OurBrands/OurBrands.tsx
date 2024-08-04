@@ -1,5 +1,5 @@
 'use client'
-/* eslint-disable @next/next/no-img-element */
+
 
 // import swiper slide
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +15,7 @@ import { Autoplay } from 'swiper/modules';
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
 import { ourBrandsData } from "@/allData/ourBrandsData";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 const titleHeading = 'Our Brands';
 
@@ -69,7 +70,7 @@ const OurBrands = () => {
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
                                 className="flex flex-col items-center text-center justify-center text-white"
                             >
-                                <img className="w-full" src={img} alt={`product-${index}`} />
+                                <Image width={365} height={0} className="" src={img} alt={`product-${index}`} />
                             </motion.div>
                         </SwiperSlide>
                     );

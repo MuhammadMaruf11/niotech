@@ -1,9 +1,9 @@
 'use client';
-/* eslint-disable @next/next/no-img-element */
 import { FC } from "react";
 import { motion } from "framer-motion";
 import { conceptItemImgData } from "@/allData/conceptItemImgData";
 import Link from "next/link";
+import Image from "next/image";
 
 const ConceptsItem: FC = () => {
     return (
@@ -16,9 +16,9 @@ const ConceptsItem: FC = () => {
                     transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
                     <Link href={data?.url}>
-                        <img
-                            loading="lazy"
-                            className="min-w-full lg:h-[220px] md:h-64 object-cover"
+                        <Image
+                            width={360} height={0}
+                            className="lg:h-[220px] md:h-64"
                             src={data?.img}
                             alt="concept"
                         />

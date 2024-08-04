@@ -1,8 +1,8 @@
 'use client'
-/* eslint-disable @next/next/no-img-element */
 import { footerContactsData, footerServicesData, footerSocialsData } from "@/allData/footerWidgetData";
 import Link from "next/link";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 const Footer = () => {
   return (
@@ -16,7 +16,7 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
           >
             <Link href="/">
-              <img className="w-60" loading="lazy" src="/img/logo/logo.png" alt="footer" />
+              <Image width={240} height={0} className="" src="/img/logo/logo.png" alt="footer" />
             </Link>
             <p className="pt-5 text-justify">
               NIOTECH SMART is a system integrator, whose work is characterized by a steady stream of innovations that significantly influence the latest trends in automation.

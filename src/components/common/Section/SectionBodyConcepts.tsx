@@ -1,7 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 import { FC } from "react";
 import { motion } from 'framer-motion';
+import Image from "next/image";
 
 interface SectionBody {
     icon: string;
@@ -74,7 +74,7 @@ const SectionBodyConcepts: FC<sectionProps> = ({ sectionTitle, sectionImage, sec
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5 }}
                 >
-                    <img className='mx-auto' loading="lazy" src={sectionImage} alt="section_body" />
+                    <Image width={600} height={0} className='mx-auto' src={sectionImage} alt="section_body" />
                 </motion.div>
             </div>
         </div>

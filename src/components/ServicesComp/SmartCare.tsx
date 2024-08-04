@@ -1,6 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
+
 'use client'
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import Link from "next/link";
 
 const imageVariants = {
@@ -22,7 +23,7 @@ const SmartCare = () => {
                 variants={imageVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
-                <img loading='lazy' className='float-left md:max-w-96 me-4 mb-4' src="/img/services/smartcare.png" alt="smartcare" />
+                <Image width={400} height={400} className='float-left me-4 mb-4' src="/img/services/smartcare.png" alt="smartcare" />
             </motion.div>
             <motion.div
                 initial="hidden"

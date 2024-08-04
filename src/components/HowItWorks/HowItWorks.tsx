@@ -31,7 +31,7 @@ const HowItWorks = () => {
                 </div>
                 <div>
                     <motion.img
-                        loading="lazy"
+
                         src="/img/random-img/howitworks.png"
                         alt="random"
                         initial={{ opacity: 0, scale: 0.95 }}
