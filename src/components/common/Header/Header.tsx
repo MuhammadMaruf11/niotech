@@ -33,6 +33,7 @@ const Header = () => {
               className="mx-auto lg:mx-0"
               src="/img/logo/logo.png"
               alt="header_logo"
+              priority
             />
           </Link>
         </div>
