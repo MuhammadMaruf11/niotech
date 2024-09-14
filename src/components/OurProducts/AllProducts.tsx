@@ -19,7 +19,7 @@ const AllProducts: FC<AllProductsProps> = ({ categories }) => {
                 {categories?.map((data, index) => (
                     <div key={index} className="bg-white xl:py-14 py-8 xl:px-6 px-4">
                         <h3>{data.CategoryName}</h3>
-                        <Image src={`https://theniotech.com/api/Categories/${data.ImagePath}`} width={200} height={50} alt="product" />
+                        <Image src={`https://theniotech.com/assets/images/CategoryImages/${data.ImagePath}`} width={200} height={50} alt="product" />
                         <Link href={`/products/${data.CategoryID}`}>View Details</Link>
                     </div>
                 ))}
