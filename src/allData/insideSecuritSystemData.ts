@@ -1,21 +1,21 @@
 export const insideSecuritSystemData = [
   {
-    id: "",
+    id: "cameras",
     img: "/img/icons/camera.svg",
     title: "Cameras",
   },
   {
-    id: "",
+    id: "securitySensors",
     img: "/img/icons/security-sensors.svg",
     title: "Security Sensors",
   },
   {
-    id: "",
+    id: "environmentalSensors",
     img: "/img/icons/environmental-sensors.svg",
     title: "Environmental Sensors",
   },
   {
-    id: "",
+    id: "smartLocks",
     img: "/img/icons/smart-locks.svg",
     title: "Smart Locks",
   },

@@ -18,7 +18,7 @@ const SmartcareMonitoring = () => {
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={smartCareBodySecond} sectionTitleOne="QUICKLY EXECUTE SYSTEM RESETS " sectionTitileColorOne=" " sectionTitleTwo="  " sectionTitileColorTwo="" sectionImage="/img/smart-care/System.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={smartCareBodyThird} sectionTitleOne="REDUCE SERVICE CALLS" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/smart-care/calls.jpg" />
             </section>
             <section className='py-20'>

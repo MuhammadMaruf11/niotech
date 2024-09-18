@@ -55,7 +55,7 @@ const OurProducts = () => {
                         slidesPerView: 1,
                     },
                 }}
-                className="bg-[#2196f3]"
+                className="bg-theme"
             >
                 {ourProductsData?.map((data, index) => {
                     const { img } = data;

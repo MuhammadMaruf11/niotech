@@ -57,7 +57,7 @@ const Header = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 * index }}
                 >
-                  <Link href={url} className="p-1 font-medium border-b-4 border-transparent">
+                  <Link href={url} target={title === 'Blog' ? '_blank' : '_self'} className="p-1 font-medium border-b-4 border-transparent">
                     {title}
                   </Link>
                   {icon && <i className={icon}></i>}
@@ -77,7 +77,7 @@ const Header = () => {
                             transition={{ duration: 0.3, delay: 0.1 * index }}
                           >
                             <Link href={url} className="py-3 px-6 hover:bg-stone-100 transition-all duration-300 ease-linear font-medium flex items-center gap-2 border-b-4 border-transparent">
-                              <img src={icon} alt="submenu_icon" />
+                              <Image src={icon} width={24} height={24} alt="submenu_icon" />
                               <span> {title}</span>
                             </Link>
                           </motion.li>
@@ -113,6 +113,7 @@ const Header = () => {
                 <Link
                   onClick={() => handleMenuClick(index)}
                   href={url}
+                  target={title === 'Blog' ? '_blank' : '_self'}
                   className='px-3 py-1 font-medium border-b-4 border-transparent block'
                 >
                   {title}

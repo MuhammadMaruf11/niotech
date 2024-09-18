@@ -1,7 +1,7 @@
 'use client';
 import { contactInformationData } from "@/allData/contactInformationData";
-import SectionTitle from "../ui/SectionTitle/SectionTitle";
 import { motion } from 'framer-motion';
+import SectionTitleWhite from "../ui/SectionTitle/SectionTitleWhite";
 
 const ContactInformation = () => {
     const titleHeading = 'Contact Information';
@@ -13,8 +13,8 @@ const ContactInformation = () => {
     };
 
     return (
-        <section className='py-12 bg-[#64bf64]'>
-            <SectionTitle titleHeading={titleHeading} />
+        <section className='py-12 bg-theme'>
+            <SectionTitleWhite titleHeading={titleHeading} />
             <div className="container mx-auto lg:max-w-screen-lg px-3">
                 <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-16 gap-6">
                     {contactInformationData?.map((data, index) => {
@@ -26,7 +26,7 @@ const ContactInformation = () => {
                                 {...animationProps}
                                 transition={{ ...animationProps.transition, delay: index * 0.2 }} // Delay for sequential animation
                             >
-                                <i className={`${icon} text-[#4ec2e7] text-5xl`} />
+                                <i className={`${icon} text-theme text-5xl`} />
                                 <h5 className="my-9 font-semibold">{title}</h5>
                                 <p className="mb-4">{paraOne}</p>
                                 <p>{paraTwo}</p>

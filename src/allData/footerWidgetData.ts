@@ -60,7 +60,7 @@ export const footerContactsData = [
     title: "info@theniotech.com",
   },
   {
-    url: "https://theniotech.com/Contact",
+    url: "/contact-us",
     icon: "fa-sharp fa-solid fa-location-dot",
     title: "Locate Us",
   },

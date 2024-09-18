@@ -1,5 +1,9 @@
 export const navbarData = [
   {
+    title: "About Us",
+    url: "/about-us",
+  },
+  {
     title: "Automations",
     url: "",
     icon: "fa-sharp fa-solid fa-caret-down",
@@ -30,10 +34,6 @@ export const navbarData = [
         url: "/industrial",
       },
     ],
-  },
-  {
-    title: "About Us",
-    url: "/about-us",
   },
   {
     title: "Concepts",

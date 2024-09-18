@@ -10,7 +10,7 @@ const WeBelieve: FC = () => {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="text-3xl uppercase text-center text-gray-800 font-semibold mb-6"
+                    className="text-3xl uppercase text-center text-white font-semibold mb-6"
                 >
                     WE BELIEVE
                 </motion.h2>

@@ -41,22 +41,22 @@ const OurBrands = () => {
                 loop={true}
                 breakpoints={{
                     1600: {
-                        slidesPerView: 5,
+                        slidesPerView: 11,
                     },
                     1200: {
-                        slidesPerView: 4,
+                        slidesPerView: 8,
                     },
                     1024: {
-                        slidesPerView: 3,
+                        slidesPerView: 6,
                     },
                     768: {
-                        slidesPerView: 2,
+                        slidesPerView: 4,
                     },
                     375: {
-                        slidesPerView: 1,
+                        slidesPerView: 2,
                     },
                 }}
-                className="bg-[#20aea5]"
+                className="bg-theme"
             >
                 {ourBrandsData?.map((data, index) => {
                     const { img } = data;
@@ -70,7 +70,7 @@ const OurBrands = () => {
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
                                 className="flex flex-col items-center text-center justify-center text-white"
                             >
-                                <Image width={365} height={0} className="" src={img} alt={`product-${index}`} />
+                                <Image width={150} height={150} className="" src={img} alt={`product-${index}`} />
                             </motion.div>
                         </SwiperSlide>
                     );

@@ -15,8 +15,8 @@ const config: Config = {
       },
       colors: {
         theme: {
-          DEFAULT: "#20aea5",
-          hover: "#57b957",
+          DEFAULT: "#0f6d65",
+          hover: "#51b94f",
         },
       },
       maxHeight: {

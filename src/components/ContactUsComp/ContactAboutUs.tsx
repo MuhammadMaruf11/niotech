@@ -23,9 +23,9 @@ const ContactAboutUs = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
                             >
-                                <i
-                                    className={`${icon} bg-[#4ec2e7] rounded-full w-12 h-12 flex items-center justify-center`}
-                                ></i>
+                                <div className="rounded-full w-12 h-12 leading-[48px] text-white bg-theme ">
+                                    <i className={icon}></i>
+                                </div>
                                 <h4 className="font-semibold lg:my-2.5 my-4">{title}</h4>
                                 <p>{email}</p>
                             </motion.div>

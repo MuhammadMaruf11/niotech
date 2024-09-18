@@ -5,7 +5,7 @@ import { whyNiotechData } from "@/allData/whyNiotechData";
 
 const WhyNiotech: FC = () => {
     return (
-        <section className="bg-[#20aea5] py-20">
+        <section className="bg-[#51b94f] py-20">
             <div className="max-w-screen-xl mx-auto px-3">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}

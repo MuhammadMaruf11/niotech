@@ -54,7 +54,7 @@ const SectionTabNav: FC<sectionProps> = ({ sectionMainTitle, sectionSubTitle, se
                         {sectionNavData.map((data, index) => (
                             <Tab key={index}>
                                 <motion.div
-                                    className="lg:py-2 lg:px-12 p-2 hover:bg-gray-100 transition-all duration-300 ease-linear cursor-pointer border border-gray-300 rounded-md hover:text-gray-700"
+                                    className="lg:py-2 lg:px-12 p-2  transition-all duration-300 ease-linear cursor-pointer border border-gray-300 rounded-md"
                                     initial={{ opacity: 0 }}
                                     whileInView={{ opacity: 1 }}
                                     transition={{ duration: 0.4, delay: 0.1 * index }}

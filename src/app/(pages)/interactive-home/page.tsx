@@ -20,7 +20,7 @@ const HomeSecurity = () => {
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={interactiveBodyFourth} sectionTitleOne="Far-Field Voice Recognition " sectionTitileColorOne=" " sectionTitleTwo="  " sectionTitileColorTwo="" sectionImage="/img/interactive-home/voicerecognition.png" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={interactiveBodyFifth} sectionTitleOne="Control Your Smart Home " sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/interactive-home/controlhome.jpg" />
             </section>
         </main>

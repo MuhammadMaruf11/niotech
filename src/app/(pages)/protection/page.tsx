@@ -15,7 +15,7 @@ const page = () => {
             <section className='py-20'>
                 <SectionBodyConcepts sectionTitle='Protection Against Natural Accidents' sectionBodyContentsData={protectionData} sectionImage="/img/protection/banner.webp" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={protectionBodyFifth} sectionTitleOne="Smoke and Temperature Sensing" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/protection/smoke.jpg" />
             </section>
             <section className='py-20'>

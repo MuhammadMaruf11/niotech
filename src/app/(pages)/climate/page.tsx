@@ -15,7 +15,7 @@ const page = () => {
             <section className='py-20'>
                 <SectionBodyConcepts sectionTitle='Smart Climate Control for Perfect Living' sectionBodyContentsData={climateData} sectionImage="/img/climate/perfectliving.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={climateBodyFifth} sectionTitleOne="Set the perfect home conditions" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/climate/thermostate.png" />
             </section>
             <section className='py-20'>

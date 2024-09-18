@@ -35,7 +35,7 @@ const SmartCare = () => {
                 <h5 className='text-[#e9b021] mb-12'>NIOTECH SMART</h5>
                 <p>
                     We recognize how important it is that your system is always operating at peak performance. After years of development we’ve created our exclusive SMARTCare Monitoring program, which is a suite of solutions created to deliver a better experience for you.
-                    <Link href='/smartcare-monitoring' className="text-blue-700 font-bold"> See More</Link>
+                    <Link href='/smartcare-monitoring' className="text-theme font-bold"> See More</Link>
                 </p>
             </motion.div>
         </>

@@ -68,7 +68,7 @@ const ContactForm = () => {
                                     >
                                         <button
                                             type="submit"
-                                            className="btn-theme px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300"
+                                            className="btn-theme px-6 py-3 text-white rounded-md  transition duration-300"
                                             disabled={isSubmitting}
                                         >
                                             {isSubmitting ? 'Submitting...' : 'Submit'}

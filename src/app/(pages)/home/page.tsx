@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <main>
             <BannerSlider bannerSilderData={bannerHomeData} />
-            <WhoWeAre />
+            {/* <WhoWeAre /> */}
             <Concepts />
         </main>
     );

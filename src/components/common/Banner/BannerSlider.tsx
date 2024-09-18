@@ -58,13 +58,13 @@ const BannerSlider: FC<BannerProps> = ({ bannerSilderData }) => {
 
                     return (
                         <SwiperSlide key={index} className="relative">
-                            <div className="banner-overlay"></div>
+                            <div className="banner-overlay "></div>
                             <Image
                                 width={1920}
                                 height={700}
                                 src={image}
                                 alt={`Slide ${index + 1}`}
-                                className="lg:h-[700px] h-80 object-cover"
+                                className="lg:h-[700px] h-[460px] object-cover"
                             />
                             <div className="absolute max-w-screen-xl mx-auto inset-0 flex flex-col items-start justify-center lg:p-8 px-3 text-white">
                                 {subtitle && (

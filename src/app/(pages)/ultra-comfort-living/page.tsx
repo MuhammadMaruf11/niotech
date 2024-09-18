@@ -11,19 +11,19 @@ const UltraComfortLiving = () => {
     return (
         <main>
             <BannerImg imageBg={imageBg} bannerTitle={bannerTitle} bannerDescription={bannerDescription} />
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={ultraComfortLivingBodyFirst} sectionTitleOne="Open/Close Shades from Your Smartphone" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/ultra-comfort-living/openorclose.jpg" />
             </section>
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={ultraComfortLivingBodySecond} sectionTitleOne="Make Irrigation Simple!" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/ultra-comfort-living/makesimple.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={ultraComfortLivingBodyFirst} sectionTitleOne="Manage Pool & Spa Anytime! Anywhere!!" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/ultra-comfort-living/managepool.jpg" />
             </section>
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={ultraComfortLivingBodyFourth} sectionTitleOne="Open Your Garage Door Easily!!" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/ultra-comfort-living/garagedoor.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={ultraComfortLivingBodyFifth} sectionTitleOne="Hassle Free Gate Control!" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/ultra-comfort-living/gatecontrol.jpg" />
             </section>
         </main>

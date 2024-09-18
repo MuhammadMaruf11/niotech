@@ -1,10 +1,11 @@
 'use client';
 import { motion } from 'framer-motion';
 import { howItWorksData } from "@/allData/howItWorksData";
+import Link from 'next/link';
 
 const HowItWorks = () => {
     return (
-        <section className="bg-[#2196f3] py-12">
+        <section className="bg-[#0f6d65] py-12">
             <div className="grid lg:grid-cols-2 gap-6 px-3 mb-12 items-center max-w-screen-xl mx-auto">
                 <div className="text-white">
                     <h2 className="text-3xl lg:mb-20 mb-12 font-bold">How it Works</h2>
@@ -42,7 +43,7 @@ const HowItWorks = () => {
             </div>
             <div className="py-12 max-w-screen-xl mx-auto">
                 <div className="text-white">
-                    <p className="text-center">… Or you can just give us a shout, and let us know your requirements. We’ll be happy to assist you.</p>
+                    <p className="text-center">… Or you can just give us a <Link className='font-bold underline' href='/about-us'>shout</Link>, and let us know your requirements. We’ll be happy to assist you.</p>
                 </div>
             </div>
         </section>

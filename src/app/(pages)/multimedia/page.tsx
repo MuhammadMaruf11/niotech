@@ -18,7 +18,7 @@ const Multimedia = () => {
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={multimediaBodyThird} sectionTitleOne="Immersive Smart Home Audio Experience " sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/multimedia/music.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={multimediaBodyFifth} sectionTitleOne="Watch TV Anywhere! Everywhere!! " sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/multimedia/tv.jpg" />
             </section>
             <section className='py-20'>

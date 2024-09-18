@@ -15,7 +15,7 @@ const EnergyEfficiency = () => {
             <section className='py-20'>
                 <SectionBodyConcepts sectionTitle='Energy Management turns Simpler' sectionBodyContentsData={energyEfficiencyData} sectionImage="/img/energy-efficiency/discovermanagement.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={energyEfficiencyBodyFifth} sectionTitleOne="Detailed Analysis for Energy Usage" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/energy-efficiency/detailedanalysis.png" />
             </section>
             <section className='py-20'>

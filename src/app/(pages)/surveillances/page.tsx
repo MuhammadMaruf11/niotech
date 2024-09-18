@@ -14,13 +14,13 @@ const Surveillances = () => {
             <section className='py-20'>
                 <SectionBodyConcepts sectionTitle='24x7 Uninterrupted Surveillance' sectionBodyContentsData={surveillancesData} sectionImage="/img/surveillances/camera.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={surveillancesBodyFirst} sectionTitleOne="Secure your main door areas" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/surveillances/smart-door-locks.jpg" />
             </section>
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={surveillancesBodySecond} sectionTitleOne="Monitor every movement" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/surveillances/monitor.jpg" />
             </section>
-            <section className='py-20 bg-[#2196f3] text-white'>
+            <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={surveillancesBodyThird} sectionTitleOne="Safety at any time of the day" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/surveillances/safety.jpg" />
             </section>
         </main>
