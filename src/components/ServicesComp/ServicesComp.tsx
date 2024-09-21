@@ -17,18 +17,28 @@ const ServicesComp = () => {
             <div className="grid lg:grid-cols-3 md:grid-cols-2 xl:gap-16 lg:gap-6 gap-6 px-3 max-w-screen-xl mx-auto">
                 {servicesCompData?.map((data, index) => {
                     return (
-                        <Link className='block bg-white xl:py-14 py-8 xl:px-6 px-4 border-b-8 border-[#35c36f]' key={index} href={data.url}>
+                        <Link
+                            className="block bg-white xl:py-14 py-8 xl:px-6 px-4 border-b-8 border-[#35c36f] relative overflow-hidden group"
+                            key={index}
+                            href={data.url}
+                        >
+
                             <motion.div
                                 variants={cardVariants}
                                 initial="hidden"
                                 animate="visible"
                                 transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
-                                className=""
+                                className="relative z-10"
                             >
                                 <Image width={75} height={75} src={data?.icon} alt="icon" />
                                 <h4 className="mb-5 mt-7 text-2xl">{data?.title}</h4>
                                 <p>{data?.description}</p>
                             </motion.div>
+                            {/* Background Image on Hover */}
+                            <div
+                                className="absolute inset-0 bg-cover bg-center opacity-0 group-hover:opacity-30 transition-opacity duration-500"
+                                style={{ backgroundImage: `url(${data.imgbg})` }}
+                            ></div>
                         </Link>
                     );
                 })}

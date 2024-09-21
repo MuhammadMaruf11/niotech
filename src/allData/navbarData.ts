@@ -101,6 +101,6 @@ export const navbarData = [
   },
   {
     title: "Blog",
-    url: "https://niotechultra.blogspot.com",
+    url: "https://niotechsmart.blogspot.com/",
   },
 ];
