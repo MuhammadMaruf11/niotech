@@ -29,7 +29,7 @@ const InsideSecuritySystem = () => {
                                 <Link className='flex flex-col justify-between h-full items-center' href={`#${id}`}>
                                     <Image width={35} height={35} src={img} alt="icon" />
                                     <h5 className="font-semibold lg:my-4 my-10">{title}</h5>
-                                    <i className='fa-sharp fas fa-chevron-down border text-[#4ec2e7] border-[#4ec2e7] group-hover:text-black transition-all ease-linear duration-300 rounded-full w-12 h-12 items-center justify-center' style={{ display: 'flex' }}></i>
+                                    <i className='fa-sharp fas fa-chevron-down border text-theme border-theme group-hover:text-black transition-all ease-linear duration-300 rounded-full w-12 h-12 items-center justify-center' style={{ display: 'flex' }}></i>
                                 </Link>
                             </motion.div>
                         )

@@ -36,7 +36,7 @@ const HomeSecurity = () => {
             </section>
 
             <section className='py-20'>
-                <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodySecond} sectionTitleOne="Always stay informed about visitors at yourdoor" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Answer-Your-Door-From-Your-Smartphone-with-SkyBell-565x240.jpg" />
+                <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodySecond} sectionTitleOne="Always stay informed about visitors at your door" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Answer-Your-Door-From-Your-Smartphone-with-SkyBell-565x240.jpg" />
             </section>
             <section className='py-20'>
                 <SectionBodyLeft sectionBodyDescriptionsData={homeSecurityBodyThird} sectionTitleOne="Do I Need a Home Security System?" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/mother-playing-with-daughter.png" />

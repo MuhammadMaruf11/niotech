@@ -30,9 +30,8 @@ const SmartCare = () => {
                 animate="visible"
                 variants={textVariants}
                 transition={{ duration: 0.5, ease: "easeOut" }}
-                className="space-y-4"
             >
-                <h5 className='text-[#e9b021] mb-12'>SMARTcare MONITORING</h5>
+                <h5 className='text-[#e9b021]'>SMARTCare MONITORING</h5>
                 <p>
                     We recognize how important it is that your system is always operating at peak performance. After years of development we’ve created our exclusive SMARTCare Monitoring program, which is a suite of solutions created to deliver a better experience for you.
                     <Link href='/smartcare-monitoring' className="text-theme font-bold"> See More</Link>

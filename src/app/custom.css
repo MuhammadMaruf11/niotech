@@ -26,8 +26,20 @@
 }
 
 .react-tabs__tab--selected {
-  background-color: #000 !important;
+  background-color: #0f6d65 !important;
   color: #fff !important;
+}
+
+:focus-visible {
+  outline: 0 !important;
+}
+
+.container.max-w-screen-lg.mx-auto.relative.z-20.text-white.text-center p {
+  display: none;
+}
+.container.max-w-screen-lg.mx-auto.relative.z-20.text-white.text-center
+  .text-lg.text-\[yellow\] {
+  display: block;
 }
 
 @media (min-width: 1200px) and (max-width: 1600px) {

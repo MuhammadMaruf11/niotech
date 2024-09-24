@@ -1,9 +1,9 @@
 export const ultraComfortLivingBodyFirst = [
   {
-    paragraph: `Motorized shades offer a host of benefits and add energy efficiency, comfort and privacy. Sensors detect the sun and set the shades to open to let in the warmth, then close at night for privacy.`,
+    paragraph: `Easily access and manage your pool and spa anytime, anywhere. Control Pool and spa lights, temperature, pumps, jets, cleaners, water features and heaters. Have the air, water and spa readings right at your fingertips to make hourly, daily or seasonal adjustments. Not home? No problem.`,
   },
   {
-    paragraph: `In the warmer months, they block the sun with a touch of a button. Programmable shades are ideal for large, hard-to-reach windows, while saving time and energy, and minimizing sun-fade on all fabrics.`,
+    paragraph: `Your perfect pool runs on your smart phone. Have your pool ready when you are and save energy when you are not.`,
   },
 ];
 
