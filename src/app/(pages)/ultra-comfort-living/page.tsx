@@ -1,10 +1,18 @@
-import { ultraComfortLivingBodyFifth, ultraComfortLivingBodyFirst, ultraComfortLivingBodyFourth, ultraComfortLivingBodySecond, ultraComfortLivingBodyThird } from "@/allData/ultraComfortLivingData";
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
 
-const UltraComfortLiving = () => {
+const UltraComfortLiving = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/ultra-comfort-living`, {
+            cache: 'no-store'
+        })
+    
+        const data = await res.json();
+        const { ultraComfortLivingBodyFifth, ultraComfortLivingBodyFirst, ultraComfortLivingBodyFourth, ultraComfortLivingBodySecond } = data;
+
     const imageBg = '/img/bg/banner-ultra-comfort-living.jpg';
     const bannerTitle = "Enjoy your Life!";
     const bannerDescription = 'keep a tab on your home, even while you’re away in the office or a vacation. With intelligent CCTV cameras that provide round-the-clock monitoring, staying connected with what matters is easy. The surveillance cameras can be installed standalone or can be configured to secure a covered area.';

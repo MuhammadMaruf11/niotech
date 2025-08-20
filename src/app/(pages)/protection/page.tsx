@@ -1,11 +1,19 @@
-import { protectionBodyFifth, protectionBodyFourth, protectionBodyThird, protectionData } from "@/allData/protectionData";
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyConcepts from "@/components/common/Section/SectionBodyConcepts";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
 
-const page = () => {
+const page = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/protection`, {
+        cache: 'no-store'
+    })
+
+    const data = await res.json();
+    const { protectionBodyFifth, protectionBodyFourth, protectionBodyThird, protectionData } = data;
+
     const imageBg = '/img/bg/banner-protection.jpg';
     const bannerTitle = "Protect Your Loved Ones";
     const bannerDescription = 'Get instant alerts on your smartphone when your home is hit by fire, flood or any other disaster and configure the central automation system to take corrective action instantly.';

@@ -1,10 +1,28 @@
-import { sectionBodyFifth, sectionBodyFirst, sectionBodyFourth, sectionBodySecond, sectionBodySixth, sectionBodyThird, sectionHeadingFirst, sectionHeadingSecond } from "@/allData/buildingPageData";
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
 import SectionHeading from "@/components/common/Section/SectionHeading";
+import { SITE_URL } from "@/config/siteConfig";
 
-const Building = () => {
+const Building = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/building`, {
+        cache: "no-store", 
+    });
+    const data = await res.json();
+
+    const {
+        sectionHeadingFirst,
+        sectionHeadingSecond,
+        sectionBodyFirst,
+        sectionBodySecond,
+        sectionBodyThird,
+        sectionBodyFourth,
+        sectionBodyFifth,
+        sectionBodySixth,
+    } = data;
+
+
     const imageBg = '/img/bg/banner-building.jpg';
     const bannerTitle = 'Building the future of homes';
     const bannerDescription = 'Eliminate manual interactions. Reduce energy footprint. Deploy proactive security measures. The future of residential and commercial spaces is here.';

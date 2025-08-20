@@ -1,9 +1,19 @@
 'use client';
 import { motion } from 'framer-motion';
-import { countMeterData } from '@/allData/countMeterData';
 import CountUp from 'react-countup';
+import { FC } from 'react';
 
-const CountMeter = () => {
+interface countmeterDataType {
+    color: string,
+    title: string,
+    number:number
+}
+
+interface countMeterProps{
+    countMeterData: countmeterDataType[]
+}
+
+const CountMeter:FC<countMeterProps> = ({ countMeterData }) => {
     return (
         <div className='container mx-auto max-w-screen-xl'>
             <div className="grid grid-cols-4 gap-6">

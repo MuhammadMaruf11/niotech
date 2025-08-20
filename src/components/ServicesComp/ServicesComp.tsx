@@ -1,16 +1,28 @@
 
 'use client'
 import { motion } from 'framer-motion';
-import { servicesCompData } from "@/allData/servicesCompData";
 import Image from 'next/image';
 import Link from 'next/link';
+import { FC } from 'react';
 
 const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
 };
 
-const ServicesComp = () => {
+interface servicesDataType {
+    url: string,
+    icon: string,
+    title: string,
+    description: string,
+    imgbg: string
+}
+
+interface servicesProps {
+    servicesCompData: servicesDataType[]
+}
+
+const ServicesComp: FC<servicesProps> = ({ servicesCompData }) => {
     return (
         <section className="bg-[url('/img/bg/servicebackground.jpg')] bg-cover bg-center bg-no-repeat py-20">
             <h2 className="text-center text-white text-3xl mb-12">OUR <span className="text-[#e9b021]">SERVICES</span> </h2>

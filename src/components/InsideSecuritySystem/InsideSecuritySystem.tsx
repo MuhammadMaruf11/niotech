@@ -2,11 +2,21 @@
 'use client';
 import { motion } from 'framer-motion';
 import SectionTitle from '../ui/SectionTitle/SectionTitle';
-import { insideSecuritSystemData } from '@/allData/insideSecuritSystemData';
 import Link from 'next/link';
 import Image from 'next/image';
+import { FC } from 'react';
 
-const InsideSecuritySystem = () => {
+interface insideSecurityDataType{
+    id: string,
+    img: string,
+    title:string
+}
+
+interface insideSecurityProps{
+    insideSecuritSystemData: insideSecurityDataType[]
+}
+
+const InsideSecuritySystem:FC<insideSecurityProps> = ({ insideSecuritSystemData }) => {
 
     const titleHeading = 'Inside Security System';
 

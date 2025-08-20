@@ -1,11 +1,20 @@
-import { climateBodyFifth, climateBodyThird, climateData } from "@/allData/climateData";
+
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyConcepts from "@/components/common/Section/SectionBodyConcepts";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
 
-const page = () => {
+const Climate = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/climate`, {
+            cache: "no-store", 
+        });
+        const data = await res.json();
+
+    const { climateBodyFifth, climateBodyThird, climateData } = data;
+
     const imageBg = '/img/bg/banner-climate.jpg';
     const bannerTitle = "Experience ultimate comfort.";
     const bannerDescription = 'Keep track of ambient temperature across corners and automatically send commands to your central cooling unit to facilitate optimum cooling. Intelligently save energy by automatically turning off AC/cooling system if a window/door is left open for too long.';
@@ -25,4 +34,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Climate;

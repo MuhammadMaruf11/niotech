@@ -1,11 +1,19 @@
-import { hotelBodyFifth, hotelBodyFirst, hotelBodyFourth, hotelBodySecond, hotelBodySixth, hotelBodyThird, hotelHeadingFirst, hotelHeadingSecond } from '@/allData/hotelPageData';
 import BannerImg from '@/components/common/Banner/BannerImg';
 import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
 import SectionHeading from '@/components/common/Section/SectionHeading';
+import { SITE_URL } from '@/config/siteConfig';
 import React from 'react';
 
-const hotel = () => {
+const hotel = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/hotel`, {
+        cache:'no-store'
+    })
+
+    const data = await res.json();
+    const { hotelBodyFifth, hotelBodyFirst, hotelBodyFourth, hotelBodySecond, hotelBodySixth, hotelBodyThird, hotelHeadingFirst, hotelHeadingSecond } = data;
+
     const imageBg = '/img/bg/banner-hotel.png';
     const bannerTitle = 'Delight your customers.';
     const bannerDescription = 'Create mood lighting. Save energy with intelligent sensing. Unlock doors and open curtains from a touch-screen interface. Welcome to the future of hotels. ';

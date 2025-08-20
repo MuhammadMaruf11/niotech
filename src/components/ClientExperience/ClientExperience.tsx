@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay, Pagination } from 'swiper/modules';
 import SectionTitleWhite from '../ui/SectionTitle/SectionTitleWhite';
+import { FC } from 'react';
 
 const titleHeading = 'client experiences';
 
@@ -22,7 +23,17 @@ const fadeInUp = {
     visible: { opacity: 1, y: 0 },
 };
 
-const ClientExperience = () => {
+interface clientDataType {
+    speech: string,
+    name: string,
+    designation: string,
+}
+
+interface clientProps {
+    clientExperienceData: clientDataType[]
+}
+
+const ClientExperience:FC<clientProps> = ({ clientExperienceData }) => {
     return (
         <section className="bg-[#282828] py-12">
             <SectionTitleWhite titleHeading={titleHeading} />

@@ -1,11 +1,20 @@
-import { energyEfficiencyBodyFifth, energyEfficiencyBodyFourth, energyEfficiencyBodyThird, energyEfficiencyData } from "@/allData/energyEfficiencyData";
+
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyConcepts from "@/components/common/Section/SectionBodyConcepts";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
 
-const EnergyEfficiency = () => {
+const EnergyEfficiency =async () => {
+
+    const res = await fetch(`${SITE_URL}/api/energy-efficiency`, {
+                cache: "no-store", 
+            });
+            const data = await res.json();
+
+    const { energyEfficiencyBodyFifth, energyEfficiencyBodyFourth, energyEfficiencyBodyThird, energyEfficiencyData } = data;
+
     const imageBg = '/img/bg/banner-energy-efficiency.jpg';
     const bannerTitle = "Discover a Smarter Way to Save Energy.";
     const bannerDescription = 'Use the power of technology to intelligently save money. Automatically turn off your air-conditioner, lights and fans when you’re not home. Get detailed insights into how much energy you’re consuming. Create personalized schedules to optimize energy consumption and comfort.';

@@ -11,10 +11,10 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
-import { ourProductsData } from '@/allData/ourProductsData';
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
 import { motion } from 'framer-motion';
 import Image from "next/image";
+import { FC } from "react";
 
 const titleHeading = 'Our Products';
 
@@ -24,7 +24,15 @@ const slideVariants = {
     exit: { opacity: 0, scale: 0.8 },
 };
 
-const OurProducts = () => {
+interface productsDataType {
+    img: string,
+}
+
+interface productsProps {
+    ourProductsData: productsDataType[]
+}
+
+const OurProducts: FC<productsProps> = ({ ourProductsData }) => {
     return (
         <section className="pt-12">
             <SectionTitle titleHeading={titleHeading} />

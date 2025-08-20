@@ -1,21 +1,33 @@
-import { camerasNavData, camerasTabData, doorLocksNavData, doorLocksTabData, environmentalSensorsNavData, environmentalSensorsTabData, homeSecurityBodyFirst, homeSecurityBodySecond, homeSecurityBodyThird, homeSecurityData, securitySensorsNavData, securitySensorsTabData } from '@/allData/homeSecurityData';
 import BannerImg from '@/components/common/Banner/BannerImg';
 import SectionBodyConcepts from '@/components/common/Section/SectionBodyConcepts';
 import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
 import SectionTabNav from '@/components/common/Section/SectionTabNav';
 import InsideSecuritySystem from '@/components/InsideSecuritySystem/InsideSecuritySystem';
-import SecurityAlarm from '@/components/SecurityAlarm/SecurityAlarm';
-import React from 'react';
+import { SITE_URL } from '@/config/siteConfig';
 
-const HomeSecurity = () => {
+const HomeSecurity = async () => {
+
+    const homeSecurityRes = await fetch(`${SITE_URL}/api/home-security`, {
+        cache:'no-store'
+    })
+
+    const { camerasNavData, camerasTabData, doorLocksNavData, doorLocksTabData, environmentalSensorsNavData, environmentalSensorsTabData, homeSecurityBodyFirst, homeSecurityBodySecond, homeSecurityBodyThird, homeSecurityData, securitySensorsNavData, securitySensorsTabData } = await homeSecurityRes.json()
+ 
+
+    const insideSecurityRes = await fetch(`${SITE_URL}/api/home-security`, {
+        cache: 'no-store'
+    })
+
+    const { insideSecuritSystemData } = await insideSecurityRes.json()
+
     const imageBg = '/img/bg/banner-home-security.jpg';
     const bannerTitle = "Take Your Home With You";
     const bannerDescription = 'Protect your home from intruders. Keep a tab on visitors. Lock and unlock your doors from anywhere. Get instant notifications on your smartphone and trigger a loud alarm, if someone tries to break into your home.';
     return (
         <main>
             <BannerImg imageBg={imageBg} bannerTitle={bannerTitle} bannerDescription={bannerDescription} />
-            <InsideSecuritySystem />
+            <InsideSecuritySystem insideSecuritSystemData={insideSecuritSystemData} />
             <section className='py-20 bg-theme text-white'>
                 <SectionBodyRight sectionBodyDescriptionsData={homeSecurityBodyFirst} sectionTitleOne="What is Home Security System?" sectionTitileColorOne=" " sectionTitleTwo="" sectionTitileColorTwo="" sectionImage="/img/home-security/Smart-Home-Owners.png" />
             </section>

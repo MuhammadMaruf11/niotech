@@ -1,9 +1,19 @@
 'use client';
 import { motion } from 'framer-motion';
-import { howItWorksData } from "@/allData/howItWorksData";
 import Link from 'next/link';
+import { FC } from 'react';
 
-const HowItWorks = () => {
+interface howItWorksDataType{
+    icon: string,
+    title: string,
+    description:string
+}
+
+interface howItworksProps {
+    howItWorksData : howItWorksDataType[]
+}
+
+const HowItWorks: FC<howItworksProps> = ({ howItWorksData }) => {
     return (
         <section className="bg-[#0f6d65] py-12">
             <div className="grid lg:grid-cols-2 gap-6 px-3 mb-12 items-center max-w-screen-xl mx-auto">
@@ -24,7 +34,7 @@ const HowItWorks = () => {
                                 </div>
                                 <div>
                                     <h5 className="text-lg">Step {index + 1} : {data?.title}</h5>
-                                    <p>{data?.descritpion}</p>
+                                    <p>{data?.description}</p>
                                 </div>
                             </motion.div>
                         )

@@ -1,8 +1,18 @@
 'use client';
 import { motion, AnimatePresence } from 'framer-motion';
-import { faqData } from '@/allData/faqData';
+import { FC } from 'react';
 
-const FaqComp = () => {
+interface faqDataType{
+    title: string,
+    descriptionOne:string
+    descriptionTwo:string
+}
+
+interface faqProps{
+    faqData:faqDataType[]
+}
+
+const FaqComp:FC<faqProps> = ({ faqData }) => {
     return (
         <section className='py-12'>
             <div className='mx-auto max-w-screen-xl px-3'>

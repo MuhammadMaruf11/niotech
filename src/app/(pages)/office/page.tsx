@@ -1,11 +1,19 @@
-import { officeBodyFifth, officeBodyFirst, officeBodyFourth, officeBodySecond, officeBodySixth, officeBodyThird, officeHeadingFirst, officeHeadingSecond } from '@/allData/officePageData';
 import BannerImg from '@/components/common/Banner/BannerImg';
 import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
 import SectionHeading from '@/components/common/Section/SectionHeading';
+import { SITE_URL } from '@/config/siteConfig';
 import React from 'react';
 
-const Office = () => {
+const Office = async () => {
+
+       const res = await fetch(`${SITE_URL}/api/office`, {
+                    cache: 'no-store'
+                })
+            
+        const data = await res.json();
+    const { officeBodyFifth, officeBodyFirst, officeBodyFourth, officeBodySecond, officeBodySixth, officeBodyThird, officeHeadingFirst, officeHeadingSecond } = data;
+
     const imageBg = '/img/bg/banner-office.jpg';
     const bannerTitle = 'Build the geekiest workplace.';
     const bannerDescription = 'Exclusively for startups and businesses, looking to make a bold statement.';

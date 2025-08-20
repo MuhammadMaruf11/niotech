@@ -1,11 +1,19 @@
-import { multimediaBodyFifth, multimediaBodyFourth, multimediaBodyThird, multimediaData } from "@/allData/multimediaData";
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyConcepts from "@/components/common/Section/SectionBodyConcepts";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
 
-const Multimedia = () => {
+const Multimedia = async () => {
+
+      const res = await fetch(`${SITE_URL}/api/multimedia`, {
+                cache: 'no-store'
+            })
+        
+    const data = await res.json();
+    const { multimediaBodyFifth, multimediaBodyFourth, multimediaBodyThird, multimediaData } = data;
+
     const imageBg = '/img/bg/banner-multimedia.jpg';
     const bannerTitle = "Turn On Intelligent Living";
     const bannerDescription = 'Home automation takes comfort to the next level, allowing you to control your television, music system, X-Box, air-conditioner or shades wirelessly from a single universal remote. What’s more? You can even create intelligent scenes to automate routine tasks and instantly switch activities at your fingertips.';

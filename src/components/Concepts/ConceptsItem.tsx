@@ -1,11 +1,19 @@
 'use client';
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { conceptItemImgData } from "@/allData/conceptItemImgData";
 import Link from "next/link";
 import Image from "next/image";
 
-const ConceptsItem: FC = () => {
+interface ConceptItem {
+    url: string;
+    img: string;
+}
+
+interface ConceptProps {
+    conceptItemImgData: ConceptItem[];
+}
+
+const ConceptsItem: FC<ConceptProps> = ({ conceptItemImgData }) => {
     return (
         <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6 mb-4">
             {conceptItemImgData?.map((data, index) => (

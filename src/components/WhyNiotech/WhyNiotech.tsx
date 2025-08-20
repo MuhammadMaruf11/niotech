@@ -1,9 +1,17 @@
 'use client'
 import { FC } from "react";
 import { motion } from 'framer-motion';
-import { whyNiotechData } from "@/allData/whyNiotechData";
 
-const WhyNiotech: FC = () => {
+interface whyNiotechDataType{
+    title: string,
+    description:string
+}
+
+interface whyNiotechProps{
+    whyNiotechData: whyNiotechDataType[]
+}
+
+const WhyNiotech: FC<whyNiotechProps> = ({ whyNiotechData }) => {
     return (
         <section className="bg-[#51b94f] py-20">
             <div className="max-w-screen-xl mx-auto px-3">

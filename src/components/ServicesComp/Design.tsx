@@ -1,7 +1,8 @@
 'use client'
+import { ServiceDesignDataType } from '@/type';
 import { motion } from 'framer-motion';
-import { serviceDesignData } from '@/allData/serviceDesignData';
 import Image from 'next/image';
+import { FC } from 'react';
 
 const textVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -13,7 +14,13 @@ const imageVariants = {
     visible: { opacity: 1, scale: 1 },
 };
 
-const Design = () => {
+
+
+interface serviceDesignProps{
+    serviceDesignData: ServiceDesignDataType[]
+}
+
+const Design:FC<serviceDesignProps> = ({ serviceDesignData }) => {
     return (
         <div className='grid md:grid-cols-2 gap-6'>
             <motion.div

@@ -13,9 +13,9 @@ import 'swiper/css/navigation';
 // import required modules
 import { Autoplay } from 'swiper/modules';
 import SectionTitle from "../ui/SectionTitle/SectionTitle";
-import { ourBrandsData } from "@/allData/ourBrandsData";
 import { motion } from 'framer-motion';
 import Image from "next/image";
+import { FC } from "react";
 
 const titleHeading = 'Our Brands';
 
@@ -25,7 +25,15 @@ const slideVariants = {
     exit: { opacity: 0, scale: 0.8 },
 };
 
-const OurBrands = () => {
+interface brandData {
+    img: string
+}
+
+interface brandProps{
+    ourBrandsData: brandData[]
+}
+
+const OurBrands:FC<brandProps> = ({ ourBrandsData }) => {
     return (
         <section className="pt-12">
             <SectionTitle titleHeading={titleHeading} />
@@ -59,7 +67,7 @@ const OurBrands = () => {
                 className="bg-theme"
             >
                 {ourBrandsData?.map((data, index) => {
-                    const { img } = data;
+                    const { img } = data
                     return (
                         <SwiperSlide key={index} className="py-6">
                             <motion.div
@@ -70,7 +78,7 @@ const OurBrands = () => {
                                 transition={{ duration: 0.6, ease: "easeInOut" }}
                                 className="flex flex-col items-center text-center justify-center text-white"
                             >
-                                <Image width={150} height={150} className="" src={img} alt={`product-${index}`} />
+                                <Image width={150} height={150} className="p-4 bg-white" src={img} alt={`product-${index}`} />
                             </motion.div>
                         </SwiperSlide>
                     );

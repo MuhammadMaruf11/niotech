@@ -16,14 +16,7 @@ export const ultraComfortLivingBodySecond = [
   },
 ];
 
-export const ultraComfortLivingBodyThird = [
-  {
-    paragraph: `Easily access and manage your pool and spa anytime, anywhere. Control Pool and spa lights, temperature, pumps, jets, cleaners, water features and heaters. Have the air, water and spa readings right at your fingertips to make hourly, daily or seasonal adjustments. Not home? No problem.`,
-  },
-  {
-    paragraph: `Your perfect pool runs on your smart phone. Have your pool ready when you are and save energy when you are not.`,
-  },
-];
+
 
 export const ultraComfortLivingBodyFourth = [
   {

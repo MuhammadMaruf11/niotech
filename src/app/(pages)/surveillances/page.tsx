@@ -1,10 +1,18 @@
-import { surveillancesBodyFirst, surveillancesBodySecond, surveillancesBodyThird, surveillancesData } from "@/allData/surveillancesData";
 import BannerImg from "@/components/common/Banner/BannerImg";
 import SectionBodyConcepts from "@/components/common/Section/SectionBodyConcepts";
 import SectionBodyLeft from "@/components/common/Section/SectionBodyLeft";
 import SectionBodyRight from "@/components/common/Section/SectionBodyRight";
+import { SITE_URL } from "@/config/siteConfig";
 
-const Surveillances = () => {
+const Surveillances = async () => {
+
+    const res = await fetch(`${SITE_URL}/api/surveillances`, {
+        cache: 'no-store'
+    })
+
+    const data = await res.json();
+    const { surveillancesBodyFirst, surveillancesBodySecond, surveillancesBodyThird, surveillancesData } = data;
+
     const imageBg = '/img/bg/banner-surveillances.jpg';
     const bannerTitle = "Be Aware. Anywhere.";
     const bannerDescription = 'keep a tab on your home, even while you’re away in the office or a vacation. With intelligent CCTV cameras that provide round-the-clock monitoring, staying connected with what matters is easy. The surveillance cameras can be installed standalone or can be configured to secure a covered area.';

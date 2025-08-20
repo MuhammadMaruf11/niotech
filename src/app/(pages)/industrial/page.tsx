@@ -1,11 +1,21 @@
-import { industrialBodyFifth, industrialBodyFirst, industrialBodyFourth, industrialBodySecond, industrialBodySixth, industrialBodyThird, industrialHeadingFirst, industrialHeadingSecond } from '@/allData/industrialPageData';
 import BannerImg from '@/components/common/Banner/BannerImg';
 import SectionBodyLeft from '@/components/common/Section/SectionBodyLeft';
 import SectionBodyRight from '@/components/common/Section/SectionBodyRight';
 import SectionHeading from '@/components/common/Section/SectionHeading';
+import { SITE_URL } from '@/config/siteConfig';
 import React from 'react';
 
-const industrial = () => {
+const Industrial = async () => {
+
+       const res = await fetch(`${SITE_URL}/api/industrial`, {
+            cache:'no-store'
+        })
+    
+    const data = await res.json();
+    
+    const { industrialBodyFifth, industrialBodyFirst, industrialBodyFourth, industrialBodySecond, industrialBodySixth, industrialBodyThird, industrialHeadingFirst, industrialHeadingSecond } = data;
+
+
     const imageBg = '/img/bg/banner-industrial.jpg';
     const bannerTitle = 'The Fourth Industrial Revolution has begun.';
     const bannerDescription = '';
@@ -50,4 +60,4 @@ const industrial = () => {
     );
 };
 
-export default industrial;
+export default Industrial;

@@ -1,4 +1,4 @@
-export const serviceDesignData = [
+export const serviceDesignData= [
   {
     title: "Audio/Video Design",
   },

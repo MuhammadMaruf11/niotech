@@ -8,13 +8,22 @@ import Installation from './Installation';
 import Programming from './Programming';
 import Support from './Support';
 import SmartCare from './SmartCare';
+import { FC } from 'react';
+import { ServiceDesignDataType } from '@/type';
 
 const panelVariants = {
     hidden: { opacity: 0, scale: 0.95 },
     visible: { opacity: 1, scale: 1 },
 };
 
-const ServicesNavTab = () => {
+
+
+interface serviceDesignProps{
+    serviceDesignData: ServiceDesignDataType[]
+    serviceTabData:ServiceDesignDataType[]
+}
+
+const ServicesNavTab: FC<serviceDesignProps> = ({ serviceDesignData, serviceTabData }) => {
     return (
         <section className='py-20'>
             <div className="max-w-screen-xl px-3 mx-auto">
@@ -46,7 +55,7 @@ const ServicesNavTab = () => {
                                 animate="visible"
                                 transition={{ duration: 0.5, ease: "easeOut" }}
                             >
-                                <Design />
+                                <Design serviceDesignData={serviceDesignData} />
                             </motion.div>
                         </TabPanel>
 

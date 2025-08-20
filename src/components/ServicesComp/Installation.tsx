@@ -1,6 +1,5 @@
 'use client'
 import { motion } from 'framer-motion';
-import { serviceDesignData } from '@/allData/serviceDesignData';
 import Image from 'next/image';
 
 const textVariants = {
